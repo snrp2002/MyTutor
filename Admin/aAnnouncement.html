@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | Admin</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>Announcement | Admin</title>
 
     <link
       rel="stylesheet"
@@ -21,8 +17,6 @@
     <link rel="stylesheet" href="./admin.css" />
   </head>
   <body>
-
-
     <!-- navbar starts --------------------------------------->
     <div class="navBar">
       <div class="left-nav">
@@ -53,14 +47,15 @@
         <div class="dropdown">
           <img
             src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png"
-            alt="dp" id="nav-dp-icon"
+            alt="dp"
+            id="nav-dp-icon"
           />
           <div class="dropdown-content" id="nav-dropdown">
-            <a href="">
+            <a href="./aProfile.html">
               <i class="fa-regular fa-user"></i>
               <li>Profile</li>
             </a>
-            <a href="">
+            <a href="./aAnnouncement.html">
               <i class="fa-solid fa-scroll"></i>
               <li>Announcements</li>
             </a>
@@ -86,8 +81,6 @@
     </div>
     <!-- navbar ends ----------------------------------------------------->
 
-
-
     <div class="admin-page">
       <!-------------------- Left Sidebar -------------------->
       <div class="left-sidebar">
@@ -102,11 +95,11 @@
         </div>
 
         <div class="left-sidebar-body">
-          <a href="">
+          <a href="./aProfile.html">
             <i class="fa-regular fa-user"></i>
             <li>Profile</li>
           </a>
-          <a href="">
+          <a href="./aAnnouncement.html">
             <i class="fa-solid fa-scroll"></i>
             <li>Announcements</li>
           </a>
@@ -131,28 +124,75 @@
 
       <!-------------------- Right Sidebar -------------------->
       <div class="right-sidebar">
-        <div class="profile-page-container"></div>
+        <div class="right-sidebar-container">
+          <div class="announcement-container">
+            <div class="right-sidebar-heading">
+              <img src="./static/announcement.png" alt="" />
+              <h4>Create an Update</h4>
+            </div>
+
+            <form id="create-announcement-form">
+              <label for="subject" class="subject">
+                <span class="announcement-ques"
+                  >Subject <i class="fas fa-asterisk"></i>
+                </span>
+                <input type="text" placeholder="Enter a Subject" required />
+              </label>
+              <label for="announcement" class="announcement">
+                <span class="announcement-ques"
+                  >Update <i class="fas fa-asterisk"></i>
+                </span>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="3"
+                  placeholder="Write your Announcement"
+                  required
+                ></textarea>
+              </label>
+              <div class="announcement-button">
+                <button type="submit">Create Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="right-sidebar-container">
+          <div class="view-announcement-container">
+            <div class="right-sidebar-heading">
+              <img src="./static/notification.png" alt="icon" />
+              <h4>Notifications</h4>
+            </div>
+
+            <div class="right-sidebar-body">
+              <div class="notification">
+                <div class="notification-name-date">
+                  <div class="notification-name">Maintenance Update</div>
+                  <div class="notification-date">10th Nov, 2022</div>
+                </div>
+                <div class="notification-message">
+                  MyTutor Application will be under maintenance from 3pm - 6pm
+                  on 14th Nov, 2022
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-
-
     <script>
-
       // Navbar script starts ----------------------------------------------->
       const dpIcon = document.getElementById("nav-dp-icon");
       const navDropdown = document.getElementById("nav-dropdown");
 
       navDropdown.hidden = true;
 
-      dpIcon.addEventListener("click", ()=>{
+      dpIcon.addEventListener("click", () => {
         navDropdown.hidden = !navDropdown.hidden;
-      })
+      });
       // Navbar script ends --------------------------------------------->
-
     </script>
-
-
-
   </body>
 </html>

@@ -171,7 +171,225 @@ body{
     margin-right: 2vw;
     width: 77vw;
     height: 80vh;
-    background-color: #fff;
-    padding: 10px 15px;
+    /* border: 1px solid red; */
     border-radius: 12px 12px 12px 12px;
+}
+
+
+/* admin profile */
+.profile{
+    display: flex;
+    max-width: 850px;
+    min-width: 350px;
+    padding: 30px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.profile-details{
+    width: 100%;
+    padding: 10px 20px 10px;
+}
+.profile-details p{
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: .9rem;
+    color: rgb(151, 151, 151);
+}
+.details{
+    display: flex;
+}
+.details-left{
+    width: 35%;
+}
+.details-left h6{
+    margin: 10px;
+    color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+}
+.details-right{
+    width: 65%;
+}
+.details-right h6{
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+}
+.profile-photo{
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(204, 204, 204, 0.505);
+}
+.profile-photo-container{
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+#upload-botton{
+    background-color: #5a4bda;
+    cursor: pointer;
+    padding: 2px 7px 7px 2px;
+    border-radius: 50%;
+    position:relative;
+    top: -38px;
+    right: -35px;
+    border: 3px whitesmoke solid;
+}
+
+#upload-botton img{
+    top: 35px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 2.5px;
+    top: 6px;
+}
+.update{
+    width: 0px;
+    position: relative;
+    left: -40px;
+    top: 10px;
+}
+.profile .username{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* Announcement page starts ----------------------------------------------- */
+.right-sidebar-container{
+    display: flex;
+    max-width: 850px;
+    min-width: 350px;
+    padding: 30px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    background-color: #fff;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+}
+.right-sidebar-container .announcement-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    /* border: 1px solid blue; */
+    width: 620px;
+}
+.right-sidebar-heading{
+    display: flex;
+    align-items: center;
+}
+.right-sidebar-heading img{
+    height: 40px;
+    width: 40px;
+}
+.right-sidebar-heading h4{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+#create-announcement-form{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fa-asterisk{
+    font-size: .5rem;
+    color: red;
+    position: relative;
+    top: -5px;
+}
+.announcement-ques{
+    width: 60px;
+    margin-right: 30px;
+}
+#create-announcement-form input{
+    width: 200px;
+    padding: 4px 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(88, 88, 88);
+    padding: 6px 20px;
+    font-size: .8rem;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(85, 85, 85);
+}
+#create-announcement-form textarea{
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 6px 20px;
+    font-size: .9rem;
+    color:rgb(85, 85, 85);
+    resize: none;
+    font-size: .8rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+#create-announcement-form label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+}
+#create-announcement-form label span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.announcement-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.announcement-button button{
+    padding: 7px 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: 	#f3a181;
+    color: white;
+    border-radius: 6px;
+    margin-top: 8px;
+    border: 0px;
+    cursor: pointer;
+}
+.right-sidebar-container .view-announcement-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    /* border: 1px solid blue; */
+}
+.right-sidebar-body{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.right-sidebar-body .notification{
+    /* border: 1px solid blue; */
+    width: 90%;
+}
+.notification .notification-name-date{
+    display: flex;
+    justify-content: space-between;
+}
+.notification .notification-date{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+}
+.notification .notification-name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(30, 130, 230);
+}
+.notification .notification-message{
+    font-size: .9rem;
+    color: rgb(79, 75, 75);
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20px;
+    margin-top: 5px;
 }

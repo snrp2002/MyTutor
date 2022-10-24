@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Admin</title>
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <!-- navbar starts --------------------------------------->
+    <div class="navBar">
+      <div class="left-nav">
+        <img src="./static/logo.png" alt="logo" />
+        <div class="brand-name">MyTutor</div>
+      </div>
+
+      <div class="mid-nav">
+        <a href="">
+          <li>Home</li>
+        </a>
+        <a href="">
+          <li>Benefits</li>
+        </a>
+        <a href="">
+          <li>Features</li>
+        </a>
+        <a href="">
+          <li>Reviews</li>
+        </a>
+        <a href="">
+          <li>Contact</li>
+        </a>
+      </div>
+
+      <div class="right-nav">
+        <button>Login</button>
+        <div class="dropdown">
+          <img
+            src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png"
+            alt="dp"
+            id="nav-dp-icon"
+          />
+          <div class="dropdown-content" id="nav-dropdown">
+            <a href="./aProfile.html">
+              <i class="fa-regular fa-user"></i>
+              <li>Profile</li>
+            </a>
+            <a href="./aAnnouncement.html">
+              <i class="fa-solid fa-scroll"></i>
+              <li>Announcements</li>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-certificate"></i>
+              <li>Verify Teacher</li>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-chart-line"></i>
+              <li>Activities</li>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-gear"></i>
+              <li>Settings</li>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <li>Logout</li>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- navbar ends ----------------------------------------------------->
+
+    <div class="admin-page">
+      <!-------------------- Left Sidebar -------------------->
+      <div class="left-sidebar">
+        <div class="left-sidebar-heading">
+          <div class="logo">
+            <img
+              src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png"
+              alt=""
+            />
+          </div>
+          <div class="left-sidebar-head">Arindam Halder</div>
+        </div>
+
+        <div class="left-sidebar-body">
+          <a href="./aProfile.html">
+            <i class="fa-regular fa-user"></i>
+            <li>Profile</li>
+          </a>
+          <a href="./aAnnouncement.html">
+            <i class="fa-solid fa-scroll"></i>
+            <li>Announcements</li>
+          </a>
+          <a href="">
+            <i class="fa-solid fa-certificate"></i>
+            <li>Verify Teacher</li>
+          </a>
+          <a href="">
+            <i class="fa-solid fa-chart-line"></i>
+            <li>Activities</li>
+          </a>
+          <a href="">
+            <i class="fa-solid fa-gear"></i>
+            <li>Settings</li>
+          </a>
+          <a href="">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <li>Logout</li>
+          </a>
+        </div>
+      </div>
+
+      <!-------------------- Right Sidebar -------------------->
+      <div class="right-sidebar">
+        <div class="profile-page-container">
+
+          <!-- admin profile starts --------------------------------------->
+          <div class="profile">
+            <div class="profile-photo-container">
+              <img src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png" class="profile-photo" />
+              <form>
+                <input
+                  type="file"
+                  name="profile-image"
+                  id="upload"
+                  style="display: none"
+                />
+                <label for="upload" id="upload-botton"
+                  ><img src="./../Student Section/img/camera.png"
+                /></label>
+              </form>
+              <div class="username">arindam369</div>
+            </div>
+            <div class="profile-details">
+              <h3>Profile Details</h3>
+              <hr />
+              <p>Personal Details</p>
+              <div class="details">
+                <div class="details-left">
+                  <h6>Name:</h6>
+                  <h6>Mobile No:</h6>
+                  <h6>Email:</h6>
+                  <h6>City/ Village/ Town:</h6>
+                </div>
+                <div class="details-right">
+                  <h6>Arindam Halder</h6>
+                  <h6>1234567890</h6>
+                  <h6>halderarindam10000@gmail.com</h6>
+                  <h6>Kalyani, Nadia</h6>
+                </div>
+              </div>
+              <!-- <p>Academic Details</p>
+              <div class="details">
+                <div class="details-left">
+                  <h6>Class:</h6>
+                  <h6>Board:</h6>
+                </div>
+                <div class="details-right">
+                  <h6>12</h6>
+                  <h6>WBCHSE</h6>
+                </div>
+              </div> -->
+            </div>
+            <div class="update">
+              <a href=""><img src="./../Student Section/img/editing.png" /></a>
+            </div>
+          </div>
+          <!-- admin profile ends ------------------------------------------>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Navbar script starts ----------------------------------------------->
+      const dpIcon = document.getElementById("nav-dp-icon");
+      const navDropdown = document.getElementById("nav-dropdown");
+
+      navDropdown.hidden = true;
+
+      dpIcon.addEventListener("click", () => {
+        navDropdown.hidden = !navDropdown.hidden;
+      });
+      // Navbar script ends --------------------------------------------->
+    </script>
+  </body>
+</html>
