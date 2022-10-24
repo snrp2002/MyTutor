@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    background-color: aliceblue;
+    background-color: rgb(232, 232, 232);
+}
+.admin-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+/* left sidebar------------------------------------------------------------ */
+.admin-page .left-sidebar{
+    /* border: 1px solid black; */
+    width: 13vw;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 0px 12px 12px 0px;
+}
+.left-sidebar-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.left-sidebar-heading .logo img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.left-sidebar-head{
+    margin-top: 8px;
+}
+.left-sidebar-body a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 13px 15px;
+    color: rgb(69, 64, 64);
+    margin-bottom: 14px;
+    border-radius:8px;
+    font-size: .9rem;
+}
+.left-sidebar-body a li{
+    list-style: none;
+    width: 120px;
+    margin-left: 10px;
+}
+.left-sidebar-body a:hover{
+    background-color: #c2e8ff;
+    color: rgb(26, 109, 233);
+}
+
+/* right sidebar ----------------------------------------------------------------*/
+.admin-page .right-sidebar{
+    width: 80vw;
+    height: 90vh;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 12px 0px 0px 12px;
+}
