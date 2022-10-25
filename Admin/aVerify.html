@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Announcement | Admin</title>
+    <title>Teacher Verification | Admin</title>
 
     <link
       rel="stylesheet"
@@ -127,53 +127,69 @@
         <div class="right-sidebar-container">
           <div class="announcement-container">
             <div class="right-sidebar-heading">
-              <img src="./static/announcement.png" alt="" />
-              <h4>Create an Update</h4>
+              <img src="./static/document.png" alt="document" />
+              <h4>Teacher Verification</h4>
             </div>
 
-            <form id="create-announcement-form">
-              <label for="subject" class="subject">
-                <span class="announcement-ques"
-                  >Subject <i class="fas fa-asterisk"></i>
-                </span>
-                <input type="text" placeholder="Enter a Subject" required />
-              </label>
-              <label for="announcement" class="announcement">
-                <span class="announcement-ques"
-                  >Update <i class="fas fa-asterisk"></i>
-                </span>
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Write your Announcement"
-                  required
-                ></textarea>
-              </label>
-              <div class="announcement-button">
-                <button type="submit">Create Update</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="right-sidebar-container">
-          <div class="view-announcement-container">
-            <div class="right-sidebar-heading">
-              <img src="./static/notification.png" alt="icon" />
-              <h4>Notifications</h4>
-            </div>
-
-            <div class="right-sidebar-body">
-              <div class="notification">
-                <div class="notification-name-date">
-                  <div class="notification-name">Maintenance Update</div>
-                  <div class="notification-date">10th Nov, 2022</div>
+            <div class="verify-page">
+              <div class="right-sidebar-body verify-container">
+                <div class="pending-document-card">
+                  <div class="pending-field">
+                    <div class="ques">Name:</div>
+                    <div class="ans">Arindam Halder</div>
+                  </div>
+                  <div class="pending-field">
+                    <div class="ques">Email:</div>
+                    <div class="ans">halderarindam10000@gmail.com</div>
+                  </div>
+                  <div class="pending-field">
+                    <div class="ques">Mobile:</div>
+                    <div class="ans">1234567890</div>
+                  </div>
+                  <div class="pending-field">
+                    <div class="ques">Gender:</div>
+                    <div class="ans">Male</div>
+                  </div>
+                  <div class="pending-field">
+                    <div class="ques">Subject:</div>
+                    <div class="ans">English</div>
+                  </div>
+                  <div class="button-box">
+                    <i class="fa-sharp fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-rectangle-xmark"></i>
+                    <i class="fa-solid fa-expand" id="expandBtn"></i>
+                  </div>
                 </div>
-                <div class="notification-message">
-                  MyTutor Application will be under maintenance from 3pm - 6pm
-                  on 14th Nov, 2022
+
+                <!-- Modal to view pending teacher application in fullscreen -->
+                <div id="myModal" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <!-- <p>Some text in the Modal..</p> -->
+                    <div class="modal-container">
+                      <div class="pending-field">
+                        <div class="ques">Name:</div>
+                        <div class="ans">Arindam Halder</div>
+                      </div>
+                      <div class="pending-field">
+                        <div class="ques">Email:</div>
+                        <div class="ans">halderarindam10000@gmail.com</div>
+                      </div>
+                      <div class="pending-field">
+                        <div class="ques">Mobile:</div>
+                        <div class="ans">1234567890</div>
+                      </div>
+                      <div class="pending-field">
+                        <div class="ques">Gender:</div>
+                        <div class="ans">Male</div>
+                      </div>
+                      <div class="pending-field">
+                        <div class="ques">Subject:</div>
+                        <div class="ans">English</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -193,6 +209,25 @@
         navDropdown.hidden = !navDropdown.hidden;
       });
       // Navbar script ends --------------------------------------------->
+
+      
+      // modal to view teacher application starts ------------------------->
+      const modal = document.getElementById("myModal");
+      const btn = document.getElementById("expandBtn");
+      const span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      // modal to view teacher application ends --------------------------->
     </script>
   </body>
 </html>

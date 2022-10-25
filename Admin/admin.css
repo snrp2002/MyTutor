@@ -393,3 +393,89 @@ body{
     margin-left: 20px;
     margin-top: 5px;
 }
+
+/* verify teacher ---------------------------------------------- */
+.pending-document-card{
+    border: 1px solid rgb(203, 200, 200);
+    padding: 16px 20px;
+    border-radius: 12px;
+    background-color: rgb(245, 245, 245);
+    margin: 10px;
+}
+.pending-field{
+    display: flex;
+    align-items: center;
+
+}
+.pending-field .ques{
+
+}
+.pending-field .ans{
+margin-left: 10px;
+}
+.pending-document-card .button-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.pending-document-card .button-box i{
+    font-size: 1.2rem;
+    margin: 15px 0px 0px;
+}
+.fa-circle-check{
+    color: #169116;
+}
+.fa-rectangle-xmark{
+    color: rgb(212, 5, 5);
+}
+.verify-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 850px;
+}
+.verify-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 1px solid red; */
+    width: 700px;
+}
+.verify-container i{
+    cursor: pointer;
+}
+
+/* Modal ---------------------------- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
