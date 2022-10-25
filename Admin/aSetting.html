@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Announcement | Admin</title>
+    <title>Setting | Admin</title>
 
     <link
       rel="stylesheet"
@@ -127,61 +127,129 @@
         <div class="right-sidebar-container">
           <div class="announcement-container">
             <div class="right-sidebar-heading">
-              <img src="./static/announcement.png" alt="" />
-              <h4>Create an Update</h4>
+              <img src="./static/settings.png" alt="" />
+              <h4>Settings & Privacy</h4>
             </div>
 
-            <form id="create-announcement-form">
-              <label for="subject" class="subject">
-                <span class="announcement-ques"
-                  >Subject <i class="fas fa-asterisk"></i>
-                </span>
-                <input type="text" placeholder="Enter a Subject" required />
-              </label>
-              <label for="announcement" class="announcement">
-                <span class="announcement-ques"
-                  >Update <i class="fas fa-asterisk"></i>
-                </span>
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  placeholder="Write your Announcement"
-                  required
-                ></textarea>
-              </label>
-              <div class="announcement-button">
-                <button type="submit">Create Update</button>
+            <div class="right-sidebar-body settings-container">
+              <div class="profile-photo-container settings-profile">
+                <div>
+                <img src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png" class="profile-photo" alt="dp" id="dpImage"/>
+                <form>
+                  <input
+                    type="file"
+                    name="profile-image"
+                    id="pimage"
+                  />
+                  <label for="upload" id="upload-botton"
+                    ><img src="./../Student Section/img/camera.png" id="profileImage"
+                  /></label>
+                </div>
+                <button>Update</button>
+
+                </form>
               </div>
+
+              <form>
+              <div class="profile-information">
+                <div class="settings-field">
+                  <div class="settings-ques">Name:</div>
+                  <input type="text" value="Arindam Halder" />
+                </div>
+                <div class="settings-field">
+                  <div class="settings-ques">Mobile:</div>
+                  <input type="text" value="Arindam Halder" />
+                </div>
+                <div class="settings-field">
+                  <div class="settings-ques">Email:</div>
+                  <input type="text" value="halderarindam10000@gmail.com" />
+                </div>
+                <div class="settings-field">
+                  <div class="settings-ques">City:</div>
+                  <input type="text" value="Kalyani, Nadia" />
+                </div>
+                <div class="settings-field">
+                  <div class="settings-ques">DOB:</div>
+                  <input type="date" value="2002-06-23" />
+                </div>
+              </div>
+              <button>Update</button>
             </form>
+              
+            </div>
           </div>
         </div>
 
+
+        <!-- 2nd box --------------------------- -->
         <div class="right-sidebar-container">
-          <div class="view-announcement-container">
+          <div class="announcement-container">
             <div class="right-sidebar-heading">
-              <img src="./static/notification.png" alt="icon" />
-              <h4>Notifications</h4>
+              <img src="./static/settings.png" alt="" />
+              <h4>Change your Password</h4>
             </div>
 
-            <div class="right-sidebar-body">
-              <div class="notification">
-                <div class="notification-name-date">
-                  <div class="notification-name">Maintenance Update</div>
-                  <div class="notification-date">10th Nov, 2022</div>
+            <div class="right-sidebar-body settings-container">
+
+              <form>
+              <div class="password-information">
+                <div class="settings-field">
+                  <div class="settings-ques">Current Password:</div>
+                  <input type="password" placeholder="Enter current password"/>
                 </div>
-                <div class="notification-message">
-                  MyTutor Application will be under maintenance from 3pm - 6pm
-                  on 14th Nov, 2022
+                <div class="settings-field">
+                  <div class="settings-ques">New Password:</div>
+                  <input type="password" placeholder="Enter new password"/>
+                </div>
+                <div class="settings-field">
+                  <div class="settings-ques">Confirm Password:</div>
+                  <input type="password" placeholder="Confirm your password"/>
                 </div>
               </div>
+              <button>Update</button>
+            </form>
+              
             </div>
           </div>
         </div>
+
+        <!-- 3rd box ----------------------------------- -->
+        <div class="right-sidebar-container">
+
+          <div class="right-sidebar-heading settings-heading">
+            <img src="./static/settings.png" alt="" />
+            <h4>Delete Your Account</h4>
+          </div>
+
+          <div class="right-sidebar-settings-body">
+            <h5>Once you delete your account, there is no going back. Please be certain</h5>
+            <button class="deleteAcc">Delete Your Account</button>
+          </div>
+        </div>
+
+
+        <!-- 4th box ------------------------------------ -->
+        <div class="right-sidebar-container">
+
+          <div class="right-sidebar-heading">
+            <img src="./static/settings.png" alt="" />
+            <h4>Logout of All Sessions</h4>
+          </div>
+
+          <div class="right-sidebar-settings-body">
+            <h5>This will log you out of MyTutor from every devices that you're currently logged in on.</h5>
+            <button class="logout">Logout of All Sessions</button>
+          </div>
+
+        </div>
+
+        
+        <br>
+
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
       // Navbar script starts ----------------------------------------------->
       const dpIcon = document.getElementById("nav-dp-icon");
@@ -193,6 +261,23 @@
         navDropdown.hidden = !navDropdown.hidden;
       });
       // Navbar script ends --------------------------------------------->
+
+      //   settings dp starts --------------------------------------------->
+      $("#profileImage").click(function (e) {
+        $("#pimage").click();
+      });
+      function fasterPreview(uploader) {
+        if (uploader.files && uploader.files[0]) {
+          $("#dpImage").attr(
+            "src",
+            window.URL.createObjectURL(uploader.files[0])
+          );
+        }
+      }
+      $("#pimage").change(function () {
+        fasterPreview(this);
+      });
+      //   settings dp ends --------------------------------------------->
     </script>
   </body>
 </html>
