@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile | Admin</title>
 
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -126,21 +125,22 @@
       <!-------------------- Right Sidebar -------------------->
       <div class="right-sidebar">
         <div class="profile-page-container">
-
           <!-- admin profile starts --------------------------------------->
           <div class="profile">
             <div class="profile-photo-container">
-              <img src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png" class="profile-photo" />
+              <img
+                src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png"
+                class="profile-photo" alt="dp" id="dpImage"
+              />
               <form>
                 <input
                   type="file"
                   name="profile-image"
-                  id="upload"
-                  style="display: none"
+                  id="pimage"
                 />
-                <!-- <label for="upload" id="upload-botton"
-                  ><img src="./../Student Section/img/camera.png"
-                /></label> -->
+                <label for="upload" id="upload-botton"
+                  ><img src="./../Student Section/img/camera.png" id="profileImage"
+                /></label>
               </form>
               <div class="username">arindam369</div>
             </div>
@@ -175,15 +175,70 @@
               </div> -->
             </div>
             <div class="update">
-              <a href=""><img src="./../Student Section/img/editing.png" /></a>
+              <img src="./../Student Section/img/editing.png" id="editBtn" />
             </div>
           </div>
           <!-- admin profile ends ------------------------------------------>
 
+          <!-- Modal to view pending teacher application in fullscreen -->
+          <div id="myModal" class="edit-modal">
+            <!-- Modal content -->
+            <div class="edit-modal-content">
+              <h4><div>Edit Details</div></h4>
+              <div class="modal-container">
+                <div class="pending-field">
+                  <div class="ques">Name</div>
+                  <div class="ans">
+                    <input type="text" value="Arindam Halder" />
+                  </div>
+                </div>
+                <div class="pending-field">
+                  <div class="ques">Mobile</div>
+                  <div class="ans">
+                    <input type="number" value="1234567890" />
+                  </div>
+                </div>
+                <div class="pending-field">
+                  <div class="ques">Gender</div>
+                  <div class="ans genders">
+                    <div class="gender-options">
+                      <span>Male</span>
+                      <input type="radio" name="gender" value="male" checked/>
+                    </div>
+                    <div class="gender-options">
+                      <span>Female</span>
+                      <input type="radio" name="gender" value="female" />
+                    </div>
+                  </div>
+                </div>
+                <div class="pending-field">
+                  <div class="ques">City</div>
+                  <div class="ans">
+                    <input type="text" value="Kalyani, Nadia" />
+                  </div>
+                </div>
+                <div class="pending-field">
+                  <div class="ques">DOB</div>
+                  <div class="ans">
+                    <input type="date" value="2002-06-23" />
+                  </div>
+                </div>
+                <div class="button-box">
+                  <div class="updateBtn">
+                    <button>Update</button>
+                  </div>
+                  <div class="cancelBtn">
+                    <button class="closeBtn">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
       // Navbar script starts ----------------------------------------------->
       const dpIcon = document.getElementById("nav-dp-icon");
@@ -195,6 +250,41 @@
         navDropdown.hidden = !navDropdown.hidden;
       });
       // Navbar script ends --------------------------------------------->
+
+      // modal to view teacher application starts ------------------------->
+      const modal = document.getElementById("myModal");
+      const btn = document.getElementById("editBtn");
+      const span = document.getElementsByClassName("closeBtn")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      // modal to view teacher application ends --------------------------->
+
+      //   settings dp starts --------------------------------------------->
+      $("#profileImage").click(function (e) {
+        $("#pimage").click();
+      });
+      function fasterPreview(uploader) {
+        if (uploader.files && uploader.files[0]) {
+          $("#dpImage").attr(
+            "src",
+            window.URL.createObjectURL(uploader.files[0])
+          );
+        }
+      }
+      $("#pimage").change(function () {
+        fasterPreview(this);
+      });
+      //   settings dp ends --------------------------------------------->
     </script>
   </body>
 </html>
