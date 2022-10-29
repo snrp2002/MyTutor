@@ -1,0 +1,410 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+section
+{
+    padding: 5rem;
+}
+
+section:nth-child(even)
+{
+    background-color: rgb(255, 255, 255);
+}
+
+section:nth-child(odd)
+{
+    background-color: rgba(219, 171, 254, 0.2);
+}
+
+.front_pg_design_hd 
+{
+    background-image: -webkit-linear-gradient(87deg, rgb(90, 75, 218), rgb(235, 66, 126));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    filter: drop-shadow(5px 5px rgb(0, 0, 0, 0.2));
+}
+
+.front_pg_btn
+{
+    height: 3rem;
+    width: 8rem;
+    margin-right: 3rem;
+    padding: 1rem 1rem;
+    padding-left: 2rem;
+    border: 5px solid rgb(174, 61, 255);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(174, 61, 255);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 750;
+    transition: all 0.5s;
+}
+
+.front_pg_btn_cap
+{
+    margin-right: 0.5rem;
+}
+
+#front_pg_btn_sign
+{
+    visibility: hidden;
+}
+
+.front_pg_btn:hover
+{
+    color: white;
+    background-color: rgb(174, 61, 255);
+    padding: 1rem 1.5rem;
+    transition: 0.4s;
+}
+
+.front_pg_btn:hover #front_pg_btn_sign
+{
+    visibility: visible;
+    transition: 0.5s;
+}
+
+#front_pg_sec_heading
+{
+    font-size: 3rem;
+    text-align: center;
+}
+
+/************------ Home Section Starts ------************/
+
+.front_pg_home
+{
+    background-image: url(./front_pg_home_img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    display: flex;
+}
+
+.front_pg_home_image 
+{
+    margin: 2rem;
+    width: 100rem;
+}
+
+.front_pg_home_image img
+{
+    background-color: black;
+}
+
+.front_pg_home_content
+{
+    margin: 2rem;
+    text-align: center;
+}
+
+.front_pg_home_content p
+{
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 1rem;
+    margin: 5rem 0rem;
+}
+
+#front_pg_home_heading
+{
+    font-size: 4rem;
+}
+
+/************------ Home Section Ends ------************/
+
+/************------ Features Section Starts ------************/
+
+.front_pg_feature_cntnr
+{
+    padding: 2rem;
+}
+
+/************------ Features Section Ends ------************/
+
+/************------ Feedback Section Starts ------************/
+
+.swiper
+{
+    padding: 1rem 0rem;
+}
+
+.swiper-wrapper
+{
+    padding: 1rem 0px 3rem 0px; 
+    display: flex;
+}
+  
+.swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+}
+
+.front_pg_fb_box
+{
+    box-shadow: 2px 2px 5px 1px rgb(0, 0, 0, 0.3);
+    height: 25rem;
+    width: 18rem;
+    border-radius: 1px;
+    margin: 0rem 1rem;
+    background-color: rgba(255, 255, 255);
+}
+
+.front_pg_fb_rv_img_box
+{
+    height: 14rem;
+    margin-bottom: 1rem;
+}
+
+.front_pg_fb_cont_box
+{
+    padding: 1rem;
+    font-size: .9rem;
+}
+
+.front_pg_fb_name_star
+{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0px;
+}
+
+.front_pg_fb_name
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(174, 61, 255);
+}
+
+.front_pg_fb_stars i
+{
+    font-size: .7rem;
+    color: rgb(255, 208, 0);
+}
+
+.front_pg_fb_content
+{
+    padding: 0.8rem 0rem;
+    text-align: justify;
+    font-size: .8rem;
+    color: rgb(119, 119, 119);
+}
+
+/************------ Feedback Section Ends ------************/
+
+/************------ Contact Us Section Starts ------************/
+
+.front_pg_cont_us_cntnr
+{
+    background-color: rgb(219, 171, 254, 0.3);
+    padding: 2rem;
+}
+
+.front_pg_cont_us_fg input
+{
+    padding: 0.5rem 1rem;
+    border: 1px inset rgb(0, 0, 0, 0.1);
+    border-radius: 2px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 1rem;
+    width: 75%;
+    font-family: sans-serif;
+    outline-color: transparent;
+}
+
+.front_pg_cont_us_form_ctrl_ta
+{
+    padding: 0.5rem 1rem;
+    border: 1px inset rgb(0, 0, 0, 0.1);
+    border-radius: 2px;
+    box-sizing: border-box;
+    resize: vertical;
+    width: 96.5%;
+    font-family: sans-serif;
+    resize: initial;
+    outline-color: transparent;
+}
+
+.front_pg_cont_us_lbl
+{
+    padding: 0.4rem 1rem;
+    display: inline-block;
+    width: 20%;
+    margin-top: 1rem;
+    padding-left: 0rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(174, 61, 255);
+}
+
+.front_pg_cont_us_ta_lbl
+{
+    padding: 0.4rem 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    padding-left: 0rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(174, 61, 255);
+}
+
+.front_pg_cont_us_btn 
+{
+    width: 9rem;
+    height: 3.5rem;
+    margin: 2rem 2rem 0rem 0rem;
+    padding: 1rem 1rem;
+    padding-left: 2rem;
+    border: 5px solid rgb(174, 61, 255);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(174, 61, 255);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 750;
+    transition: all 0.5s;
+} 
+  
+.front_pg_cb_cap
+{
+    margin-right: 0.5rem;
+}
+
+#front_pg_cb_sign
+{
+    visibility: hidden;
+}
+
+.front_pg_cont_us_btn:hover
+{
+    color: white;
+    background-color: rgb(174, 61, 255);
+    padding: 1rem 1.5rem;
+    transition: 0.4s;
+} 
+
+.front_pg_cont_us_btn:hover #front_pg_cb_sign
+{
+    visibility: visible;
+    transition: 0.5s;
+}
+
+/************------ Contact Us Section Ends ------************/
+
+/************------ Footer Section Starts ------************/
+
+.front_pg_footer
+{
+    background-image: url(./front_pg_footer_img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+}
+
+.front_pg_footer_lists
+{
+    color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.front_pg_footer_contact
+{
+    width: 40vw;
+    text-align: left;
+    padding-left: 10rem;
+}
+
+.front_pg_footer_contact h3
+{
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+}
+
+.front_pg_footer_contact_list p
+{
+    padding: 0.5rem 0rem;
+}
+
+.front_pg_footer_contact_list p:hover
+{
+    color: rgb(219, 171, 254);
+}
+
+.front_pg_footer_others
+{
+    width: 40vw;
+    text-align: left;
+}
+
+.front_pg_footer_others h3
+{
+    font-size: 1.5rem;
+    padding: 0rem 2rem;
+}
+
+.front_pg_footer_others_list li
+{
+    padding: 0.2rem 0rem;
+}
+
+.front_pg_footer_others_list li a
+{
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.front_pg_footer_others_list li:hover a
+{
+    color: rgb(219, 171, 254);
+}
+    
+.front_pg_footer_social-media
+{
+    padding: 0px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.front_pg_footer_social-media li a i
+{
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+
+.front_pg_footer_social-media li a i:hover
+{
+    color: rgb(219, 171, 254);
+}
+
+.front_pg_footer_cpyrt 
+{
+    font-size: 1rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.front_pg_footer_cpyrt:hover
+{
+    color: rgb(219, 171, 254);
+}
+
+/************------ Footer Section Ends ------************/
