@@ -20,7 +20,7 @@
         <!-- Home section starts -->
         <section class="front_pg_home">
             <div class="front_pg_home_image">
-                <img src="" alt="">
+                <img src="./front_pg_home_svg_img.svg" alt="">
             </div>
 
             <div class="front_pg_home_content">
@@ -34,7 +34,7 @@
 
         <!-- Features section starts -->
         <section class="front_pg_feature">
-            <h3 class="front_pg_design_hd" id="front_pg_sec_heading">Features</h3>
+            <h3 class="front_pg_design_hd" id="front_pg_sec_heading"><img src="./front_pg_feature_icon.png" alt="">Features</h3>
             <div class="front_pg_feature_cntnr">
                 
             </div>
@@ -43,7 +43,7 @@
 
         <!-- Feedback section starts -->
         <section class="front_pg_feedback">
-            <h3 class="front_pg_design_hd" id="front_pg_sec_heading">Reviews</h3>
+            <h3 class="front_pg_design_hd" id="front_pg_sec_heading"><img src="./front_pg_feedback_icon.png" alt="">Reviews</h3>
             <div class="front_pg_feedback_cntnr">
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -182,7 +182,7 @@
 
         <!-- Contact Us section starts -->
         <section class="front_pg_cont_us">
-            <h3 class="front_pg_design_hd" id="front_pg_sec_heading">Contact Us</h3>
+            <h3 class="front_pg_design_hd" id="front_pg_sec_heading"><img src="./front_pg_contact_icon.png" alt="">Contact Us</h3>
             <div class="front_pg_cont_us_cntnr">
                 <form class="front_pg_cont_us_form">
                     <div class="front_pg_cont_us_fg">
@@ -201,9 +201,8 @@
                     </div>
                 
                     <div class="front_pg_cont_us_fg">
-                        <label class="front_pg_cont_us_ta_lbl" for="exampleFormControlTextarea1">Please write your query here</label>
-                        <br>
-                        <textarea class="front_pg_cont_us_form_ctrl_ta" id="query" rows="5" placeholder="Write your query here" required></textarea>
+                        <label class="front_pg_cont_us_lbl" for="exampleFormControlTextarea1">Enter your query</label>
+                        <textarea class="front_pg_cont_us_form_ctrl" id="query" rows="5" placeholder="Write your query here" required></textarea>
                     </div>
                     <div class="front_pg_cb_fg">
                         <button type="submit" class="front_pg_cont_us_btn"><span class="front_pg_cb_cap">Submit</span><span id="front_pg_cb_sign" class="fas fa-angle-double-right"></span></button>
@@ -248,44 +247,43 @@
             </div>
         </section>
         <!-- Footer section ends -->
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', 
+            {
+                // Default parameters
+                slidesPerView: 1,
+                spaceBetween: 10,
+                // Responsive breakpoints
+                breakpoints: 
+                {
+                // when window width is >= 565px
+                565: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 845px
+                845: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                // when window width is >= 1186px
+                1186: {
+                    slidesPerView: 4,
+                    spaceBetween: 40
+                }
+                },
+                pagination: {
+                el: ".swiper-pagination",
+                },
+                autoplay: 
+                {
+                delay: 8000,
+                disableOnInteraction: true,
+                }
+            })
+        </script>
     </body>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', 
-        {
-            // Default parameters
-            slidesPerView: 1,
-            spaceBetween: 10,
-            // Responsive breakpoints
-            breakpoints: 
-            {
-            // when window width is >= 565px
-            565: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            // when window width is >= 845px
-            845: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            // when window width is >= 1186px
-            1186: {
-                slidesPerView: 4,
-                spaceBetween: 40
-            }
-            },
-            pagination: {
-            el: ".swiper-pagination",
-            },
-            autoplay: 
-            {
-            delay: 8000,
-            disableOnInteraction: true,
-            }
-        })
-    </script>
-
 </html>
