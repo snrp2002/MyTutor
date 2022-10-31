@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batch</title>
+    <link rel="stylesheet" href="batch.css">
+</head>
+<body>
+  <div class="mainbody">
+    <div class="header">
+        My Batches
+    </div>
+    <div class="headersecond">Number of batches: 1</div>
+    <div class="containers">
+        <div class="box">
+            <div class="boxhead">
+               <a href="/"> <div class="subname">Physics</div>
+                <div class="cl">class 10, ICSE</div>
+            </a>
+            </div>
+            <div class="boxbody">
+                <div class="fee">Fees: Rs 500</div>
+                <div class="studcount">Number of students: 40</div>
+                <div class="daytime">Monday , 8:00 AM - 10:00 AM</div>
+                <div class="editd"> <a id="modaledit">
+                    <img src="imgcopy/editing.png">
+                    <a id="delete" class="delete"><img src="imgcopy/delete.png" alt=""></a>
+                </a></div>
+            </div>
+        </div>
+    </div>
+    <div class="details-update">
+       
+    <div class="buttons">
+        <button id="editBtn">Add Batch</button>
+    </div>
+  </div> 
+  </div>
+  
+  <div class="edit-modal" id="myModal">
+    <div class="edit-modal-content">
+        <h2><b>Add Details</b></h2>
+        <div>
+            <form>
+                <div class="profile-edit-elements">
+                    <div class="profile-edit-field"><h6>Subject</h6></div>
+                    <div class="profile-edit-input"><input type="text" name="subject" value="Physics"  required></div>
+                </div>
+                <div class="profile-edit-elements">
+                    <div class="profile-edit-field"><h6>Class-details</h6></div>
+                    <div class="profile-edit-input"><input type="text" name="classdetails" value="class 10, ICSE" required></div>
+                </div>
+               
+                
+                
+                <div class="profile-edit-elements">
+                    <div class="profile-edit-field"><h6>Amount</h6></div>
+                    <div class="profile-edit-input"><input type="number" name="amount"  value="500" required></div>
+                </div>
+                <div class="profile-edit-elements">
+                    <div class="profile-edit-field"><h6>Timing</h6></div>
+                    <div class="profile-edit-input"><input type="text" name="timing" value="Monday, 10:00 AM - 12:30 AM" required></div>
+                </div>
+                <div class="profile-edit-elements">
+                    <div class="updateBtn">
+                        <button>Update</button>
+                    </div>
+                    <div class="cancelBtn">
+                        <button class="closeBtn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="edit-modal" id="myModaledit">
+    <div class="edit-modal-content">
+        <h2><b>Edit Details</b></h2>
+        <div>
+            <form>
+                
+                <div class="profile-edit-elements">
+                    <div class="profile-edit-field"><h6>Amount</h6></div>
+                    <div class="profile-edit-input"><input type="number" name="amount"  value="500" required></div>
+                </div>
+                <div class="profile-edit-elements">
+                    <div class="profile-edit-field"><h6>Timing</h6></div>
+                    <div class="profile-edit-input"><input type="text" name="timing" value="Monday, 10:00 AM - 12:30 AM" required></div>
+                </div>
+                <div class="profile-edit-elements">
+                    <div class="updateBtn">
+                        <button>Update</button>
+                    </div>
+                    <div class="cancelBtn">
+                        <button class="closeBtns">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+const modal = document.getElementById("myModal");
+        const btn = document.getElementById("editBtn");
+        const span = document.getElementsByClassName("closeBtn");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        const modale = document.getElementById("myModaledit");
+        const btne = document.getElementById("modaledit");
+        const spane = document.getElementsByClassName("closeBtns");
+
+        btne.onclick = function () {
+            modale.style.display = "block";
+        };
+        spane.onclick = function () {
+            modale.style.display = "none";
+        };
+        window.onclick = function (event) {
+            if (event.target == modale) {
+                modale.style.display = "none";
+            }
+        };
+
+    </script>
+</body>
+</html>

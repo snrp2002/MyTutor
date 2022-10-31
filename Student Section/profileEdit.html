@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/style.css">
+  </head>
+  <body>
+	<div class="edit-modal">
+        <div class="edit-modal-content">
+            <h2><b>Edit Details</b></h2>
+            <div>
+                <form>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>First Name</h6></div>
+                        <div class="profile-edit-input"><input type="text" name="first_name" value="Name"  required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Last Name</h6></div>
+                        <div class="profile-edit-input"><input type="text" name="last_name" value="Name" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Gender</h6></div>
+                        <div class="profile-edit-input" id="gender">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <span class="gender-option">Male</span>
+                            <input type="radio" id="female" name="gender" value="Female" required>
+                            <span class="gender-option">Female</span>
+                        </div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>D.O.B.</h6></div>
+                        <div class="profile-edit-input"><input type="date" id="DOB" name="DOB" min="1999-12-31" value="2000-01-01" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Email</h6></div>
+                        <div class="profile-edit-input"><input type="email" name="email" value="snrp2002@gmail.com" disabled></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Mobile No.</h6></div>
+                        <div class="profile-edit-input"><input type="tel" name="mobile_no" pattern="[6-9]{1}[0-9]{9}" value="9875571304" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>City/ Village </h6></div>
+                        <div class="profile-edit-input"><input type="text" name="city" value="City/Village" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="updateBtn">
+                            <button>Update</button>
+                        </div>
+                        <div class="cancelBtn">
+                            <button class="closeBtn">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1; //January is 0!
+        let yyyy = today.getFullYear();
+
+        if (dd < 10) {
+        dd = '0' + dd;
+        }
+        if (mm < 10) {
+        mm = '0' + mm;
+        }    
+        today = yyyy + '-' + mm + '-' + dd;
+        let min = (yyyy-100) + '-01-01'; 
+        document.getElementById("DOB").setAttribute("max", today);
+        document.getElementById("DOB").setAttribute("min", min);
+    </script>
+
+  </body>
+</html>

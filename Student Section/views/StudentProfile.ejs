@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StudentProfile</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="profile">
+        <div class="profile-photo-container">
+            <img src="<%= DP %>" class="profile-photo">
+            <form action="/updateDP" method="post" enctype="multipart/form-data">
+                <input type="file" accept="image/*" name="profile_image" value="<%= DP %>" id="upload" style="display: none;" onchange="this.form.submit()">
+                <label for="upload" id="upload-botton"><img src="img\camera.png" width="20px"></label>
+            </form>
+        </div>
+        <div class="profile-details">
+            <h3>Profile Details</h3>
+            <hr>
+            <p>Personal Details2</p>
+            <div class="details">
+                <!-- <div class="details-left">
+                    <h6>Name:</h6>
+                    <h6>D.O.B.:</h6>
+                    <h6>Mobile No:</h6>
+                    <h6>Email:</h6>
+                    <h6>City/ Village:</h6>
+                </div>
+                <div class="details-right">
+                    <h6>Souvik Naskar</h6>
+                    <h6>14/11/2002</h6>
+                    <h6>9875571304</h6>
+                    <h6>snrp2002@gmail.com</h6>
+                    <h6>Kolkata</h6>
+                </div> -->
+                <div class="details-container">
+                    <div class="details-left"><h6>Name</h6></div>
+                    <div class="details-right"><h6>Souvik Naskar</h6></div>
+                </div>
+                <div class="details-container">
+                    <div class="details-left"><h6>D.O.B:</h6></div>
+                    <div class="details-right"><h6>14-11-2002</h6></div>
+                </div>
+                <div class="details-container">
+                    <div class="details-left"><h6>Gender</h6></div>
+                    <div class="details-right"><h6>Male</h6></div>
+                </div>
+                <div class="details-container">
+                    <div class="details-left"><h6>Email</h6></div>
+                    <div class="details-right"><h6>snrp2002@gmail.com</h6></div>
+                </div>
+                <div class="details-container">
+                    <div class="details-left"><h6>Mobile No.</h6></div>
+                    <div class="details-right"><h6>9875571304</h6></div>
+                </div>
+                <div class="details-container">
+                    <div class="details-left"><h6>City/Village</h6></div>
+                    <div class="details-right"><h6>Kolkata</h6></div>
+                </div>
+            </div>
+            <p>Academic Details</p>
+            <div class="details">
+                <div class="details-container">
+                    <div class="details-left"><h6>Class</h6></div>
+                    <div class="details-right"><h6>12+</h6></div>
+                </div>
+                <div class="details-container">
+                    <div class="details-left"><h6>Board</h6></div>
+                    <div class="details-right"><h6>WestBengal</h6></div>
+                </div>
+            </div>
+        </div>
+        <div class="details-update">
+            <a id="editBtn"><img src="img/editing.png"></a>
+        </div>
+    </div>
+
+    <div class="edit-modal" id="myModal">
+        <div class="edit-modal-content">
+            <h2><b>Edit Details</b></h2>
+            <div>
+                <form>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>First Name</h6></div>
+                        <div class="profile-edit-input"><input type="text" name="first_name" value="Name"  required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Last Name</h6></div>
+                        <div class="profile-edit-input"><input type="text" name="last_name" value="Name" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Gender</h6></div>
+                        <div class="profile-edit-input" id="gender">
+                            <input type="radio" id="male" name="gender" value="Male" checked required>
+                            <span class="gender-option">Male</span>
+                            <input type="radio" id="female" name="gender" value="Female" required>
+                            <span class="gender-option">Female</span>
+                        </div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>D.O.B.</h6></div>
+                        <div class="profile-edit-input"><input type="date" id="DOB" name="DOB" min="1999-12-31" value="2000-01-01" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Email</h6></div>
+                        <div class="profile-edit-input"><input type="email" name="email" value="snrp2002@gmail.com" disabled></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>Mobile No.</h6></div>
+                        <div class="profile-edit-input"><input type="tel" name="mobile_no" pattern="[6-9]{1}[0-9]{9}" value="9875571304" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="profile-edit-field"><h6>City/ Village </h6></div>
+                        <div class="profile-edit-input"><input type="text" name="city" value="City/Village" required></div>
+                    </div>
+                    <div class="profile-edit-elements">
+                        <div class="updateBtn">
+                            <button>Update</button>
+                        </div>
+                        <div class="cancelBtn">
+                            <button class="closeBtn">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1; //January is 0!
+        let yyyy = today.getFullYear();
+
+        if (dd < 10) {
+        dd = '0' + dd;
+        }
+        if (mm < 10) {
+        mm = '0' + mm;
+        }    
+        today = yyyy + '-' + mm + '-' + dd;
+        let min = (yyyy-100) + '-01-01'; 
+        document.getElementById("DOB").setAttribute("max", today);
+        document.getElementById("DOB").setAttribute("min", min);
+
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("editBtn");
+        const span = document.getElementsByClassName("closeBtn");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+  </body>
+</html>
