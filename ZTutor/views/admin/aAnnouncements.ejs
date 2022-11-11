@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcement | Admin</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/aStyle.css" />
+  </head>
+  <body>
+    <!-- navbar starts --------------------------------------->
+    <%- include('../partials/navbar', {DP: aDP}); %>
+    <!-- navbar ends ----------------------------------------------------->
+
+    <div class="home-page">
+      <!-------------------- Left Sidebar -------------------->
+      <%- include('aPartials/sidebar', {DP: aDP, name: aDetails.name}); %>
+
+      <!-------------------- Right Sidebar -------------------->
+      <div class="right-sidebar">
+        <div class="right-sidebar-container">
+          <div class="announcement-container">
+            <div class="right-sidebar-heading">
+              <img src="images/admin/announcement.png" alt="" />
+              <h4>Create an Update</h4>
+            </div>
+
+            <form id="create-announcement-form" action="/aAnnouncementUpdate" method="post">
+              <label for="subject" class="subject">
+                <span class="announcement-ques"
+                  >Subject <i class="fas fa-asterisk"></i>
+                </span>
+                <input type="text" placeholder="Enter a Subject" name="subject" required />
+              </label>
+              <label for="announcement" class="announcement">
+                <span class="announcement-ques"
+                  >Update <i class="fas fa-asterisk"></i>
+                </span>
+                <textarea
+                  name="body"
+                  id=""
+                  cols="30"
+                  rows="3"
+                  placeholder="Write your Announcement"
+                  required
+                ></textarea>
+              </label>
+              <div class="announcement-button">
+                <button type="submit">Create Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="right-sidebar-container">
+          <div class="view-announcement-container">
+            <div class="right-sidebar-heading">
+              <img src="images/admin/notification.png" alt="icon" />
+              <h4>Notifications</h4>
+            </div>
+
+            <div class="right-sidebar-body">
+            <% aAnnouncements.forEach((notification)=>{ %>
+                <div class="notification">
+                    <div class="notification-name-date">
+                        <div class="notification-name"><%=notification.subject%></div>
+                        <div class="notification-date"><%=notification.date%></div>
+                    </div>
+                    <div class="notification-message">
+                        <%=notification.body%>
+                    </div>
+                </div>
+            <%}); %>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
