@@ -10,7 +10,8 @@
     justify-content: center;
     font-weight: 900;
     font-size: 2rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .headersecond
 {
@@ -21,6 +22,7 @@
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 .containers
 {
@@ -38,11 +40,24 @@ box-shadow: 3px 3px 10px 1px rgb(105, 104, 104);
 border-radius: 5%;
 
 }
+.box:hover{
+   transform: translate(0, 10px);
+}
 .boxhead
 {
-    background-color: rgb(140, 139, 139);
+    /* background-color: rgb(140, 139, 139); */
+    background: linear-gradient(to bottom, rgb(209, 207, 207), rgb(120, 118, 118), rgb(27, 26, 26));
     padding: 30px 30px;
     border-radius: 5%;
+    display: flex;
+    /* box-shadow: 3px 3px 10px 1px rgb(105, 104, 104); */
+}
+
+.boximg img{
+    height: 60px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin-left: 80px;
 }
 .boxhead a{
     display: flex;
@@ -73,6 +88,8 @@ height: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;  
+    color: rgb(167, 163, 163);
+    text-shadow: 1px 0.5px rgb(161, 160, 160);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .boxbody a:hover{
