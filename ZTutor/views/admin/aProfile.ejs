@@ -1,182 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile | Admin</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/aStyle.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- navbar starts --------------------------------------->
-    <%- include('../partials/navbar', {DP: aDP}); %>
+    <%- include('../partials/navbar') %>
     <!-- navbar ends ----------------------------------------------------->
 
     <div class="home-page">
-        <!-------------------- Left Sidebar -------------------->
-        <%- include('aPartials/sidebar', {DP: aDP, name: aDetails.name}); %>
+      <!-------------------- Left Sidebar -------------------->
+      <%- include('aPartials/sidebar') %>
 
-        <!-------------------- Right Sidebar -------------------->
-        <div class="right-sidebar">
-            <div class="profile-page-container">
-                <!-- admin profile starts --------------------------------------->
-                <div class="profile">
-                    <div class="profile-photo-container">
-                        <img src="<%= aDP %>" class="profile-photo" alt="dp" id="dpImage" />
-                        <form>
-                            <input type="file" name="profile-image" id="pimage" />
-                            <label for="pimage" id="upload-botton"><img src="images/home/camera.png"
-                                    id="profileImage" /></label>
-                        </form>
-                    </div>
-                    <div class="profile-details">
-                        <h3>Profile Details</h3>
-                        <hr />
-                        <p>Personal Details</p>
-                        <div class="details">
-                            <div class="details-left">
-                                <h6>Name:</h6>
-                                <h6>DOB:</h6>
-                                <h6>Gender:</h6>
-                                <h6>Mobile No:</h6>
-                                <h6>Email:</h6>
-                                <h6>City/Village:</h6>
-                            </div>
-                            <div class="details-right">
-                                <h6>
-                                    <%= aDetails.name %>
-                                </h6>
-                                <h6>
-                                    <%= aDetails.DOB %>
-                                </h6>
-                                <h6>
-                                    <%= aDetails.gender %>
-                                </h6>
-                                <h6>
-                                    <%= aDetails.mobile_no %>
-                                </h6>
-                                <h6>
-                                    <%= aDetails.email %>
-                                </h6>
-                                <h6>
-                                    <%= aDetails.city %>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="update">
-                        <img src="images/home/editing.png" id="editBtn" />
-                    </div>
-                </div>
-                <!-- admin profile ends ------------------------------------------>
-
-                <!-- Modal to view pending teacher application in fullscreen -->
-                <div id="myModal" class="edit-modal">
-                    <!-- Modal content -->
-                    <div class="edit-modal-content">
-                        <h4>
-                            <div>Edit Details</div>
-                        </h4>
-                        <div class="modal-container">
-                        <form action="/aProfileUpdate" method="post">
-                            <div class="pending-field">
-                                <div class="ques">Name</div>
-                                <div class="ans">
-                                    <input type="text" name="name" value="<%= aDetails.name %>" required/>
-                                </div>
-                            </div>
-                            <div class="pending-field">
-                                <div class="ques">DOB</div>
-                                <div class="ans">
-                                    <input type="date" name="DOB" value="<%= aDetails.DOB %>" required/>
-                                </div>
-                            </div>
-                            <div class="pending-field">
-                                <div class="ques">Gender</div>
-                                <div class="ans genders">
-                                    <% if(aDetails.gender=="Male" ){ %>
-                                        <div class="gender-options">
-                                            <span>Male</span>
-                                            <input type="radio" name="gender" value="Male" checked />
-                                        </div>
-                                        <div class="gender-options">
-                                            <span>Female</span>
-                                            <input type="radio" name="gender" value="Female" />
-                                        </div>
-                                        <% }else{ %>
-                                            <div class="gender-options">
-                                                <span>Male</span>
-                                                <input type="radio" name="gender" value="Male" />
-                                            </div>
-                                            <div class="gender-options">
-                                                <span>Female</span>
-                                                <input type="radio" name="gender" value="Female" checked />
-                                            </div>
-                                            <% } %>
-                                </div>
-                            </div>
-                            <div class="pending-field">
-                                <div class="ques">Mobile</div>
-                                <div class="ans">
-                                    <input type="number" name="mobile_no" value="<%= aDetails.mobile_no %>" required/>
-                                </div>
-                            </div>
-                            <div class="pending-field">
-                                <div class="ques">Email</div>
-                                <div class="ans">
-                                    <input type="text" name="email" value="<%= aDetails.email %>" readonly style="color: grey; outline:none;"/>
-                                </div>
-                            </div>
-                            <div class="pending-field">
-                                <div class="ques">City</div>
-                                <div class="ans">
-                                    <input type="text" name="city" value="<%= aDetails.city %>" required/>
-                                </div>
-                            </div>
-                            <div class="button-box">
-                                <div class="updateBtn">
-                                    <button name="update" value="true">Update</button>
-                                </div>
-                                <div class="cancelBtn">
-                                    <button class="closeBtn" name="update" value="false">Cancel</button>
-                                </div>
-                            </div>
-                        </form>
-                        </div>
-                    </div>
-                </div>
+      <!-------------------- Right Sidebar -------------------->
+      <div class="right-sidebar">
+        <div class="profile-page-container">
+          <!-- admin profile starts --------------------------------------->
+          <div class="profile">
+            <div class="profile-photo-container">
+              <img
+                src="https://assets.leetcode.com/users/avatars/avatar_1646054996.png"
+                class="profile-photo"
+                alt="dp"
+                id="dpImage"
+              />
+              <form>
+                <input type="file" name="profile-image" id="pimage" />
+                <label for="pimage" id="upload-botton"
+                  ><img src="images/home/camera.png" id="profileImage"
+                /></label>
+              </form>
             </div>
+            <div class="profile-details">
+              <h3>Profile Details</h3>
+              <hr />
+              <p>Personal Details</p>
+              <div class="details">
+                <div class="details-left">
+                  <h6>Name:</h6>
+                  <h6>DOB:</h6>
+                  <h6>Gender:</h6>
+                  <h6>Mobile No:</h6>
+                  <h6>Email:</h6>
+                  <h6>City/Village:</h6>
+                </div>
+                <div class="details-right">
+                  <h6>Arindam Halder</h6>
+                  <h6>2002-06-23</h6>
+                  <h6>Male</h6>
+                  <h6>1234567890</h6>
+                  <h6>halderarindam10000</h6>
+                  <h6>Kalyani</h6>
+                </div>
+              </div>
+            </div>
+            <div class="update">
+              <img src="images/home/editing.png" id="editBtn" />
+            </div>
+          </div>
+          <!-- admin profile ends ------------------------------------------>
+
+          <!-- Modal to view pending teacher application in fullscreen -->
+          <div id="myModal" class="edit-modal">
+            <!-- Modal content -->
+            <div class="edit-modal-content">
+              <h4>
+                <div>Edit Details</div>
+              </h4>
+              <div class="modal-container">
+                <form action="/aProfileUpdate" method="post">
+                  <div class="pending-field2">
+                    <div class="ques">Name</div>
+                    <div class="ans">
+                      <input
+                        type="text"
+                        name="name"
+                        value="Arindam halder"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="pending-field2">
+                    <div class="ques">DOB</div>
+                    <div class="ans">
+                      <input
+                        type="date"
+                        name="DOB"
+                        value="2002-06-23"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="pending-field2">
+                    <div class="ques">Gender</div>
+                    <div class="ans genders">
+                      <div class="gender-options">
+                        <span>Male</span>
+                        <input
+                          type="radio"
+                          name="gender"
+                          value="Male"
+                          checked
+                        />
+                      </div>
+                      <div class="gender-options">
+                        <span>Female</span>
+                        <input type="radio" name="gender" value="Female" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pending-field2">
+                    <div class="ques">Mobile</div>
+                    <div class="ans">
+                      <input
+                        type="number"
+                        name="mobile_no"
+                        value="1234567890"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="pending-field2">
+                    <div class="ques">Email</div>
+                    <div class="ans">
+                      <input
+                        type="text"
+                        name="email"
+                        value="halderarindam10000"
+                        readonly
+                        style="color: grey; outline: none"
+                      />
+                    </div>
+                  </div>
+                  <div class="pending-field2">
+                    <div class="ques">City</div>
+                    <div class="ans">
+                      <input type="text" name="city" value="Kalyani" required />
+                    </div>
+                  </div>
+                  <div class="button-box">
+                    <div class="updateBtn">
+                      <button name="update" value="true">Update</button>
+                    </div>
+                    <div class="cancelBtn">
+                      <button class="closeBtn" name="update" value="false">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-        // modal to view teacher application starts ------------------------->
-        const modal = document.getElementById("myModal");
-        const btn = document.getElementById("editBtn");
-        const span = document.getElementsByClassName("closeBtn")[0];
+      // modal to view teacher application starts ------------------------->
+      const modal = document.getElementById("myModal");
+      const btn = document.getElementById("editBtn");
+      const span = document.getElementsByClassName("closeBtn")[0];
 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        };
-        span.onclick = function () {
-            modal.style.display = "none";
-        };
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-        // modal to view teacher application ends --------------------------->
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      // modal to view teacher application ends --------------------------->
     </script>
-</body>
-
+  </body>
 </html>

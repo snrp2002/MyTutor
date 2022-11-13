@@ -9,14 +9,16 @@ app.use(express.static("public"));
 
 
 
-
 //-------------------- Admin Section --------------------//
 let aDetails = {name:"Souvik Naskar", gender:"Male", DOB:'2002-11-14', email:"snrp2002@gamil.com", 
     mobile_no:9875571304, city:"Kolkata"};  
 let aDP = "images/admin/admin.png";
 let aAnnouncements = []
 app.get("/aProfile",(req, res)=>{
-    res.render("admin/aProfile",{aDP:aDP, aDetails: aDetails});
+    res.render("admin/aProfile");
+})
+app.get("/aVerify",(req, res)=>{
+    res.render("admin/aVerify");
 })
 
 app.post("/aProfileUpdate",(req, res)=>{

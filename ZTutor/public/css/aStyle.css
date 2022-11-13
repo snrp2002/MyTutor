@@ -134,42 +134,43 @@
     width: 90%;
 }
 
-.edit-modal .pending-field {
+.edit-modal .pending-field2 {
     margin: 12px 10px;
+    display: flex;
 }
 
-.edit-modal .pending-field .ques {
+.edit-modal .pending-field2 .ques {
     width: 60px;
     margin-right: 16px;
     color: rgb(122, 120, 120);
 }
 
-.edit-modal .pending-field .ans input[type="text"] {
+.edit-modal .pending-field2 .ans input[type="text"] {
     padding: 5px 15px;
     width: 200px;
 }
 
-.edit-modal .pending-field .ans input[type="number"] {
+.edit-modal .pending-field2 .ans input[type="number"] {
     padding: 5px 15px;
     width: 200px;
 }
 
-.edit-modal .pending-field .ans input[type="date"] {
+.edit-modal .pending-field2 .ans input[type="date"] {
     padding: 5px 15px;
     width: 200px;
 }
 
-.edit-modal .pending-field .ans input[type="radio"] {
+.edit-modal .pending-field2 .ans input[type="radio"] {
     padding: 5px 30px;
 }
 
-.edit-modal .pending-field .genders {
+.edit-modal .pending-field2 .genders {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.edit-modal .pending-field .gender-options {
+.edit-modal .pending-field2 .gender-options {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,18 +178,19 @@
     margin-left: 10px;
 }
 
-.edit-modal .pending-field {
+.edit-modal .pending-field2 {
     color: rgb(54, 54, 54);
     font-size: .85rem;
 }
 
-.edit-modal .pending-field input {
+.edit-modal .pending-field2 input {
     color: rgb(132, 132, 132);
     font-size: .8rem;
 }
 
 #editBtn {
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .edit-modal .button-box {
@@ -530,4 +532,93 @@
     color: rgb(79, 75, 75);
     margin-left: 20px;
     margin-top: 5px;
+}
+
+/* verify teacher ---------------------------------------------- */
+.pending-document-card{
+    border: 1px solid rgb(203, 200, 200);
+    padding: 14px;
+    border-radius: 12px;
+    /* background-color: rgb(245, 245, 245); */
+    background: linear-gradient(#a4a4fc, #bfbfff, #a4a4fc);
+    margin: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+    height: 280px;
+}
+.pending-document-card .img-field{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.pending-field{
+    display: flex;
+    align-items: center;
+    width: 230px;
+}
+.pending-field .ques{
+    font-size: .8rem;
+}
+.pending-field .ans{
+    margin-left: 10px;
+    font-size: .75rem;
+}
+.pending-document-card .button-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.pending-document-card .img-field img{
+    border-radius: 12px;
+    height: 150px;
+    width: 150px;
+}
+.pending-document-card .button-box i{
+    font-size: 1.2rem;
+    margin: 15px 0px 0px;
+}
+.verify-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 850px;
+}
+.verify-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 1px solid red; */
+    width: 700px;
+}
+.verify-container i{
+    cursor: pointer;
+}
+.pending-document-card .button-box3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.pending-document-card .button-box3 .accept-button{
+    background-color: green;
+    color: white;
+    border: 0px;
+    padding: 3px 12px;
+    font-size: .7rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pending-document-card .button-box3 .reject-button{
+    background-color: #d9534f;
+    color: white;
+    border: 0px;
+    padding: 3px 12px;
+    font-size: .7rem;
+    border-radius: 4px;
+    cursor: pointer;
 }

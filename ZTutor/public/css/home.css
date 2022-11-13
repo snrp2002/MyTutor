@@ -65,18 +65,20 @@ textarea{
 }
 .right-nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 11vw;
+    width: 130px;
+    /* border: 1px solid red; */
 }
 .right-nav button{
-    padding: 5px 18px;
-    font-size: .9rem;
+    padding: 5px 14px;
+    font-size: .75rem;
+    font-weight: 600;
     cursor: pointer;
 }
 .right-nav img{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     cursor: pointer;
     transition: transform .2s ease-in-out;
@@ -116,7 +118,7 @@ textarea{
     padding: 0px 0px;
     z-index: 1;
     right: 0;
-    top: 52px;
+    top: 46px;
     border-top: 6px solid rgb(26, 109, 233);
 }
 /* navbar ends ----------------------------------------------------------- */
@@ -334,4 +336,42 @@ textarea{
     color: white;
     font-size: .73rem;
     border-radius: 6px;
+}
+.notif-icon{
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.notification-head{
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.noti-dropdown{
+    padding: 8px 15px;
+    border-top: 6px solid rgb(26, 109, 233);
+    right: 0;
+    top: 38px;
+}
+.notifications-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notification-message{
+    font-size: .76rem;
+    margin-bottom: 14px;
+}
+.see-all-btn{
+    float: right;
+    font-size: .75rem;
+    padding: 4px 9px;
+    color: #5a4bda;
+    font-weight: 800;
+    border: 1px solid #5a4bda;
+    cursor: pointer;
+}
+.right-nav i:hover{
+    transform: scale(.9);
 }
