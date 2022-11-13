@@ -10,6 +10,11 @@
     background-color: #fff;
 }
 
+.profile h6{
+    margin: 10px;
+    font-size: 0.9rem;
+}
+
 .profile-details {
     width: 100%;
     padding: 10px 20px 10px;
@@ -31,18 +36,11 @@
 }
 
 .details-left h6 {
-    margin: 10px;
     color: gray;
-    font-size: .8rem;
 }
 
 .details-right {
     width: 65%;
-}
-
-.details-right h6 {
-    margin: 10px;
-    font-size: .8rem;
 }
 
 .profile-photo {
@@ -119,9 +117,9 @@
 .edit-modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 20px 20px 30px;
     border: 1px solid #888;
-    width: 30%;
+    width: 350px;
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -135,33 +133,56 @@
 }
 
 .edit-modal .pending-field2 {
-    margin: 12px 10px;
+    margin: 20px 10px;
     display: flex;
 }
 
 .edit-modal .pending-field2 .ques {
     width: 60px;
     margin-right: 16px;
-    color: rgb(122, 120, 120);
+    color:grey;
+    font-weight: 600;
+    display: flex;
+    font-size: 0.9rem;
+    align-items: center;
 }
 
 .edit-modal .pending-field2 .ans input[type="text"] {
     padding: 5px 15px;
     width: 200px;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 0.9rem;
 }
 
 .edit-modal .pending-field2 .ans input[type="number"] {
     padding: 5px 15px;
     width: 200px;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 0.9rem;
 }
 
 .edit-modal .pending-field2 .ans input[type="date"] {
     padding: 5px 15px;
     width: 200px;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 0.9rem;
 }
 
 .edit-modal .pending-field2 .ans input[type="radio"] {
     padding: 5px 30px;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 0.9rem;
+    height: 17px;
+    width: 17px;
+    accent-color: #5a4bda;
 }
 
 .edit-modal .pending-field2 .genders {
@@ -176,6 +197,8 @@
     align-items: center;
     margin-right: 20px;
     margin-left: 10px;
+    font-size: 0.9rem;
+    color: #000;
 }
 
 .edit-modal .pending-field2 {
@@ -202,10 +225,14 @@
 .edit-modal .button-box .updateBtn button {
     background-color: #5a4bda;
     color: white;
+    font-family: inherit;
+    font-weight: 600;
 }
 
 .edit-modal .button-box .cancelBtn button {
     color: #5a4bda;
+    font-weight: 600;
+    font-family: inherit;
 }
 
 .edit-modal .button-box button {

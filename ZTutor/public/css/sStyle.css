@@ -4,7 +4,7 @@
 }
 .profile h6{
     margin: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 .profile{
     display: flex;
@@ -33,11 +33,7 @@
 }
 .details-left{
     width: 35%;
-}
-.details-left h6{
-    margin: 10px;
     color: gray;
-    font-size: 1rem;
 }
 .details-right{
     width: 65%;
@@ -79,7 +75,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 110; /* Sit on top */
-    padding-top: 60px; /* Location of the box */
+    padding-top: 80px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -91,7 +87,7 @@
 .edit-modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px 30px;
+    padding: 20px 40px 30px;
     border: 1px solid #888;
     width: 470px;
     border-radius: 12px;
@@ -107,11 +103,11 @@
 .profile-edit-field{
     align-items: left;
     color: grey;
-    width: 170px;
+    width: 150px;
 }
 .edit-modal h6{
-    font-size: 1rem;
-    margin: 20px 0;
+    font-size: 0.9rem;
+    margin: 15px 0;
 }
 .profile-edit-input{
     width: 300px;
