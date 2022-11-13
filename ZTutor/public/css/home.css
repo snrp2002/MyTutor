@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+    background-color: rgb(232, 232, 232);
+}
+input{
+    font-family: inherit;
+}
+textarea{
+    font-family: inherit;
+}
+.home-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+/* navbar starts ----------------------------------------------------------- */
+.navBar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    position: fixed;
+    width: 94%;
+    z-index: 100;
+}
+.left-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.left-nav .brand-name{
+    color: white;
+    cursor: pointer;
+}
+.left-nav img{
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    margin-right: 14px;
+    cursor: pointer;
+}
+.mid-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45vw;
+}
+.mid-nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.05rem;
+}
+.mid-nav a li{
+    list-style: none;
+}
+.mid-nav a:hover{
+    color: aqua;
+}
+.right-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 11vw;
+}
+.right-nav button{
+    padding: 5px 18px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+.right-nav img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+.right-nav img:hover{
+    transform: scale(.9);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 13px 20px;
+    color: rgb(69, 64, 64);
+    margin-bottom: 0px;
+    font-size: .9rem;
+}
+.dropdown a li{
+    list-style: none;
+    width: 130px;
+    margin-left: 10px;
+}
+.dropdown a:hover{
+    background-color: #c2e8ff;
+    color: rgb(26, 109, 233);
+}
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0px 0px;
+    z-index: 1;
+    right: 0;
+    top: 52px;
+    border-top: 6px solid rgb(26, 109, 233);
+}
+/* navbar ends ----------------------------------------------------------- */
+
+/* left sidebar------------------------------------------------------------ */
+.left-sidebar{
+    width: 13vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 22px;
+    border-radius: 0px 12px 12px 0px;
+    margin-top: 60px;
+    position: fixed;
+    top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.left-sidebar-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 600;
+}
+.left-sidebar-heading .logo img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(204, 204, 204, 0.505);
+}
+.left-sidebar-head{
+    margin-top: 8px;
+}
+.left-sidebar-body a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 13px 15px;
+    color: rgb(69, 64, 64);
+    margin-bottom: 14px;
+    border-radius:8px;
+    font-size: .9rem;
+}
+.left-sidebar-body a li{
+    list-style: none;
+    width: 120px;
+    margin-left: 10px;
+}
+.left-sidebar-body a:hover{
+    /* background-color: #c2e8ff; */
+    /* color: rgb(26, 109, 233); */
+    color: #5a4bda;
+    font-weight: 500;
+    background-color:#bfbfff;
+}
+
+/* right sidebar ----------------------------------------------------------------*/
+.right-sidebar{
+    margin-top: 60px;
+    margin-right: 2vw;
+    width: 77vw;
+    height: 80vh;
+    border-radius: 12px 12px 12px 12px;
+    position: relative;
+    left: 235px;
+    top: 54px;
+}
+
+/* Settings Page ---------------------------------------------------------------*/
+.right-sidebar-container{
+    display: flex;
+    max-width: 850px;
+    min-width: 350px;
+    padding: 30px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    background-color: #fff;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.right-sidebar-container .announcement-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    width: 620px;
+}
+.right-sidebar-heading{
+    display: flex;
+    align-items: center;
+}
+.right-sidebar-heading img{
+    height: 40px;
+    width: 40px;
+}
+.right-sidebar-heading h4{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+.settings-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 780px;   /* at the  time of media query remove this  */
+  }
+  .settings-container .profile-dp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .settings-container .profile-information{
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+  }
+  .settings-container .profile-information .settings-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 20px;
+  }
+  .settings-container .settings-field .settings-ques{
+    margin-right: 10px;
+    font-weight: 600;
+    color: rgb(64, 64, 64);
+    width: 60px;
+    /* border: 1px solid red; */
+    font-size: .9rem;
+  }
+  .settings-container .settings-field input{
+    padding: 5px 15px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid rgb(70, 70, 70);
+  }
+#pimage
+{
+    display:none;
+}
+.settings-profile{
+    display: flex;
+}
+.settings-profile button{
+    margin-left: 20px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.settings-container{
+    text-align: center;
+}
+.settings-container button{
+    padding: 8px 20px;
+    /* background-color: rgb(43, 102, 249); */
+    background-color: #5a4bda;
+    color: white;
+    border: 0px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .8rem;
+    cursor: pointer;
+}
+.password-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.password-information .settings-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+}
+.password-information .settings-field .settings-ques{
+    width: 150px;
+}
+.right-sidebar-settings-body{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(134, 132, 132);
+    font-size: 1.1rem;
+}
+.right-sidebar-settings-body h5{
+    margin: 0px 0px 20px;
+}
+.deleteAcc{
+    padding: 7px 16px;
+    cursor: pointer;
+    border: 1px solid rgb(208, 205, 205);
+    
+    background-color: #dc3545;
+    color: white;
+    font-size: .73rem;
+    border-radius: 6px;
+}
+.logout{
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid rgb(208, 205, 205);
+    
+    /* background-color: #0d6efd; */
+    background-color: #5a4bda;
+    color: white;
+    font-size: .73rem;
+    border-radius: 6px;
+}

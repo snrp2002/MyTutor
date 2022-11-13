@@ -19,13 +19,13 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage});
 
-let DP = "img/student.jpg";
-app.get("/", (req, res)=>{
-    res.render("StudentProfile",{DP: DP});
+let StudentDP = "img/student.jpg";
+app.get("/StudentProfile", (req, res)=>{
+    res.render("StudentProfile",{StudentDP: StudentDP});
 })
-app.post("/updateDP", upload.single("profile_image"),(req, res)=>{
-    DP = "uploads/"+req.file.filename;
-    res.redirect("/");
+app.post("/updateStudentDP", upload.single("profile_image"),(req, res)=>{
+    StudentDP = "uploads/"+req.file.filename;
+    res.redirect("/StudentProfile");
 })
 
 app.listen(port, ()=>{

@@ -25,15 +25,83 @@ section:nth-child(even)
 
 section:nth-child(odd)
 {
-    background-color: rgba(219, 171, 254, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .front_pg_design_hd 
 {
-    background-image: -webkit-linear-gradient(87deg, rgb(90, 75, 218), rgb(235, 66, 126));
+    background-image: -webkit-linear-gradient(87deg, rgb(90, 75, 218, 0.8), rgba(89, 75, 218, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
+}
+
+#front_pg_sec_heading
+{
+    height: 4rem;
+    filter: drop-shadow(2px 2px rgb(0, 0, 0, 0.2));
+}
+
+#front_pg_sec_heading img
+{
+    height: 3rem;
+    filter: drop-shadow(1px 1px rgb(0, 0, 0, 0.2));
+    margin-right: 1rem;
+}
+
+/************------ Home Section Starts ------************/
+
+.front_pg_home::before
+{
+    content: '';
+    position: absolute;
+    width: 100rem;
+    height: 100rem;
+    border-radius: 50%;
+    top: -55%;
+    right: 48%;
+    transform: translateY(-50%);
+    background: linear-gradient(rgb(90, 75, 218, 0.7), rgba(89, 75, 218, 1));
+    z-index: 1;
+}
+
+.front_pg_home
+{
+    display: flex;
+    padding-bottom: 10rem;
+}
+
+.front_pg_home_image 
+{
+    margin: 2rem;
+    width: 100rem;
+}
+
+.front_pg_home_image img
+{
+    z-index: 5;
+    height: 20rem;
+    margin-top: 10rem;
+    background: transparent;
+    position: absolute;
+}
+
+.front_pg_home_content
+{
+    margin: 2rem;
+    text-align: center;
+}
+
+.front_pg_home_content p
+{
+    color: rgb(0, 0, 0, 0.7);
+    font-size: 1rem;
+    margin: 5rem 0rem;
+}
+
+#front_pg_home_heading
+{
+    font-size: 4rem;
     filter: drop-shadow(5px 5px rgb(0, 0, 0, 0.2));
 }
 
@@ -44,10 +112,10 @@ section:nth-child(odd)
     margin-right: 3rem;
     padding: 1rem 1rem;
     padding-left: 2rem;
-    border: 5px solid rgb(174, 61, 255);
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(174, 61, 255);
+    border: 5px solid rgb(90, 75, 218);
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(90, 75, 218);
     font-size: 1rem;
     text-decoration: none;
     font-weight: 750;
@@ -67,7 +135,7 @@ section:nth-child(odd)
 .front_pg_btn:hover
 {
     color: white;
-    background-color: rgb(174, 61, 255);
+    background-color: rgb(90, 75, 218);
     padding: 1rem 1.5rem;
     transition: 0.4s;
 }
@@ -82,47 +150,6 @@ section:nth-child(odd)
 {
     font-size: 3rem;
     text-align: center;
-}
-
-/************------ Home Section Starts ------************/
-
-.front_pg_home
-{
-    background-image: url(./front_pg_home_img.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 80vh;
-    display: flex;
-}
-
-.front_pg_home_image 
-{
-    margin: 2rem;
-    width: 100rem;
-}
-
-.front_pg_home_image img
-{
-    background-color: black;
-}
-
-.front_pg_home_content
-{
-    margin: 2rem;
-    text-align: center;
-}
-
-.front_pg_home_content p
-{
-    color: rgb(0, 0, 0, 0.7);
-    font-size: 1rem;
-    margin: 5rem 0rem;
-}
-
-#front_pg_home_heading
-{
-    font-size: 4rem;
 }
 
 /************------ Home Section Ends ------************/
@@ -189,7 +216,7 @@ section:nth-child(odd)
 {
     font-size: 1.2rem;
     font-weight: 700;
-    color: rgb(174, 61, 255);
+    color: rgb(90, 75, 218);
 }
 
 .front_pg_fb_stars i
@@ -212,8 +239,15 @@ section:nth-child(odd)
 
 .front_pg_cont_us_cntnr
 {
-    background-color: rgb(219, 171, 254, 0.3);
+    box-shadow: 2px 2px 5px 1px rgb(0, 0, 0, 0.1);
     padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+.front_pg_cont_us_fg
+{
+    display: flex;
+    align-items: center;
 }
 
 .front_pg_cont_us_fg input
@@ -229,40 +263,30 @@ section:nth-child(odd)
     outline-color: transparent;
 }
 
-.front_pg_cont_us_form_ctrl_ta
+.front_pg_cont_us_fg textarea
 {
     padding: 0.5rem 1rem;
     border: 1px inset rgb(0, 0, 0, 0.1);
     border-radius: 2px;
     box-sizing: border-box;
-    resize: vertical;
-    width: 96.5%;
+    width: 75%;
     font-family: sans-serif;
     resize: initial;
     outline-color: transparent;
+    margin-top: 1rem;
 }
 
 .front_pg_cont_us_lbl
 {
     padding: 0.4rem 1rem;
     display: inline-block;
-    width: 20%;
+    width: 15%;
     margin-top: 1rem;
-    padding-left: 0rem;
+    padding-left: 3rem;
     font-size: 1rem;
     font-weight: 600;
-    color: rgb(174, 61, 255);
-}
-
-.front_pg_cont_us_ta_lbl
-{
-    padding: 0.4rem 1rem;
-    display: inline-block;
-    margin-top: 1rem;
-    padding-left: 0rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgb(174, 61, 255);
+    color: rgb(90, 75, 218);
+    text-align: left;
 }
 
 .front_pg_cont_us_btn 
@@ -272,14 +296,15 @@ section:nth-child(odd)
     margin: 2rem 2rem 0rem 0rem;
     padding: 1rem 1rem;
     padding-left: 2rem;
-    border: 5px solid rgb(174, 61, 255);
-    border-radius: 5px;
-    background-color: white;
-    color: rgb(174, 61, 255);
+    border: 5px solid rgb(90, 75, 218);
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(90, 75, 218);
     font-size: 1rem;
     text-decoration: none;
     font-weight: 750;
     transition: all 0.5s;
+    transform: translateX(2.5rem) ;
 } 
   
 .front_pg_cb_cap
@@ -295,7 +320,7 @@ section:nth-child(odd)
 .front_pg_cont_us_btn:hover
 {
     color: white;
-    background-color: rgb(174, 61, 255);
+    background-color: rgb(90, 75, 218);
     padding: 1rem 1.5rem;
     transition: 0.4s;
 } 
@@ -312,10 +337,7 @@ section:nth-child(odd)
 
 .front_pg_footer
 {
-    background-image: url(./front_pg_footer_img.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(rgb(90, 75, 218, 1), rgba(89, 75, 218, 0.9));
     color: rgb(255, 255, 255);
 }
 
@@ -341,11 +363,14 @@ section:nth-child(odd)
 .front_pg_footer_contact_list p
 {
     padding: 0.5rem 0rem;
+    transition: 0.3s;
 }
 
 .front_pg_footer_contact_list p:hover
 {
-    color: rgb(219, 171, 254);
+    padding-left: 10px;
+    border-left: 4px solid white;
+    background: linear-gradient(90deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
 }
 
 .front_pg_footer_others
@@ -368,11 +393,14 @@ section:nth-child(odd)
 .front_pg_footer_others_list li a
 {
     color: rgb(255, 255, 255, 0.8);
+    transition: 0.3s;
 }
 
 .front_pg_footer_others_list li:hover a
 {
-    color: rgb(219, 171, 254);
+    padding-left: 10px;
+    border-left: 4px solid white;
+    background: linear-gradient(90deg, rgb(255, 255, 255, 0.15), rgb(255, 255, 255, 0));
 }
     
 .front_pg_footer_social-media
@@ -386,13 +414,15 @@ section:nth-child(odd)
 .front_pg_footer_social-media li a i
 {
     color: rgb(255, 255, 255, 0.8);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 1rem;
+    transition: 0.2s;
 }
 
 .front_pg_footer_social-media li a i:hover
 {
-    color: rgb(219, 171, 254);
+    padding: 0.75rem;
+    font-size: 2rem;
 }
 
 .front_pg_footer_cpyrt 
@@ -400,11 +430,12 @@ section:nth-child(odd)
     font-size: 1rem;
     text-align: center;
     margin: 2rem;
+    transition: 0.1s;
 }
 
 .front_pg_footer_cpyrt:hover
 {
-    color: rgb(219, 171, 254);
+    transform: scale(1.01);
 }
 
 /************------ Footer Section Ends ------************/

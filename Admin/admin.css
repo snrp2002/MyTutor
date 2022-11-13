@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 body{
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     background-color: aliceblue;
     background-color: rgb(232, 232, 232);
@@ -23,8 +25,9 @@ body{
 }
 .left-nav .brand-name{
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     cursor: pointer;
+    font-weight: 700;
 }
 .left-nav img{
     height: 30px;
@@ -42,8 +45,9 @@ body{
 .mid-nav a{
     text-decoration: none;
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: 1.05rem;
+    font-weight: 700;
 }
 .mid-nav a li{
     list-style: none;
@@ -59,7 +63,7 @@ body{
 }
 .right-nav button{
     padding: 5px 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: .9rem;
     cursor: pointer;
 }
@@ -83,7 +87,7 @@ body{
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     padding: 13px 20px;
     color: rgb(69, 64, 64);
     margin-bottom: 0px;
@@ -137,7 +141,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 .left-sidebar-heading .logo img{
     height: 80px;
@@ -153,7 +157,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     padding: 13px 15px;
     color: rgb(69, 64, 64);
     margin-bottom: 14px;
@@ -462,7 +466,7 @@ body{
 .announcement-button button{
     padding: 7px 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: 	#f3a181;
+    background-color: 	#5a4bda;
     color: white;
     border-radius: 6px;
     margin-top: 8px;
@@ -632,6 +636,8 @@ margin-left: 10px;
   .settings-container .settings-field input{
     padding: 5px 15px;
     width: 150px;
+    border-radius: 5px;
+    border: 1px solid rgb(70, 70, 70);
   }
 #pimage
 {
@@ -650,9 +656,11 @@ margin-left: 10px;
 }
 .settings-container button{
     padding: 8px 20px;
-    background-color: rgb(43, 102, 249);
+    /* background-color: rgb(43, 102, 249); */
+    background-color: #5a4bda;
     color: white;
     border: 0px;
+    border-radius: 6px;
     font-weight: 600;
     font-size: .8rem;
     cursor: pointer;
@@ -695,6 +703,7 @@ margin-left: 10px;
     background-color: #dc3545;
     color: white;
     font-size: .73rem;
+    border-radius: 6px;
 }
 .logout{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -703,7 +712,8 @@ margin-left: 10px;
     border: 1px solid rgb(208, 205, 205);
     
     /* background-color: #0d6efd; */
-    background-color: rgb(43, 102, 249);
+    background-color: #5a4bda;
     color: white;
     font-size: .73rem;
+    border-radius: 6px;
 }

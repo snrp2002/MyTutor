@@ -1,6 +1,3 @@
-body{
-    font-family: monospace;
-}
 .profile h3{
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -12,13 +9,12 @@ body{
 .profile{
     display: flex;
     max-width: 850px;
-    min-width: 350px;
     padding: 30px;
     margin: auto;
-    margin-top: 30px;
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
+    background-color: white;
 }
 
 /* Profile Details Section */
@@ -50,6 +46,7 @@ body{
 /* Profile Photo Section */
 .profile-photo{
     width: 120px;
+    height: 120px;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(204, 204, 204, 0.505);
 }
@@ -61,7 +58,7 @@ body{
 #upload-botton{
     background-color: #5a4bda;
     cursor: pointer;
-    padding: 12px 6px 3px;
+    padding: 8px 6px 3px;
     border-radius: 50%;
     position:relative;
     top: -35px;
@@ -200,9 +197,6 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
 }
-.notes_initial_text{
-    padding: 5px 0px;
-}
 .note{
    display: flex;
    align-items: center;
@@ -217,7 +211,7 @@ body{
     margin-right: 20px;
 }
 .note_title{
-    font-size: 0.9rem;
+    font-size: 1rem;
     width: 75%;
     font-weight: 600;
     color: rgb(125, 125, 125);
@@ -225,6 +219,7 @@ body{
 .note_date{
     color: #888;
     font-weight: 400;
+    font-size: 0.8rem;
 }
 .note_break {
     margin: 0;
@@ -291,4 +286,157 @@ body{
 }
 .person:hover{
     background-color: rgba(235, 235, 235, 0.504);
+}
+
+
+/* Announcement Section */
+.announcement{
+    margin: auto;
+    width: 750px;
+    /* border: 1px solid grey; */
+    padding: 20px;
+}
+.announcement_poster{
+    height: 220px;
+    border-radius: 10px;
+    background-image: url("img/animation-1.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(144 164 173);
+    background-position: right;
+}
+.announcement_headings{
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    top: -85px;
+    height: 0;
+}
+.announcement_mainheading{
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+.announcement_subheading{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.announcement_edit{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    width: 100%;
+}
+.announcement_edit_primary{
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    color:rgb(105, 105, 105);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.announcement_edit_primary_img{
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 40px;
+}
+.announcement_edit_primary:hover{
+    font-weight: 500;
+}
+.announcement_edit_secondary{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    display: none;
+}
+
+.announcement_edit_body input{
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(248, 249, 250);
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 20px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: inherit;
+    outline: none;
+}
+
+.announcement_edit_body textarea{
+    width: 90%;
+    height: 100px;
+    resize: initial;
+    padding: 10px;
+    background-color: rgb(248, 249, 250);
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: inherit;
+    outline: none;
+}
+.announcement_edit_buttons{
+    display: flex;
+    justify-content: right;
+}
+.announcement_edit_buttons button{
+    margin-right: 25px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 40px;
+    border-radius: 7px;
+    border: 1px solid #5a4bda;
+    cursor: pointer;
+}
+#announcement_edit_post_btn{
+    color: white;
+    background-color: #5a4bda;
+}
+#announcement_edit_cancel_btn{
+    color: #5a4bda;
+    background-color: white;
+}
+.past_announcement{
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 99%;
+    border: 1px solid rgb(177, 177, 177);
+    cursor: pointer;
+    overflow: hidden;
+}
+.announcement_title{
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    color: rgb(70, 70, 70);
+}
+.announcement_img{
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #888;
+    padding: 7px 6px 2px;
+}
+.announcement_delete{
+    border-radius: 50%;
+    padding: 5px 7px 4px;
+}
+.announcement_delete:hover{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 15px;;
+}
+.announcement_body{
+    padding: 20px 30px;
+    text-align:justify;
+    color: rgb(70, 70, 70);
+    font-weight: 500;
+    background-color: rgb(230, 230, 230);
+    display: none;
 }
