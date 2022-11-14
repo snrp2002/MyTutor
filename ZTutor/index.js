@@ -74,3 +74,14 @@ app.post("/sSettingsPasswordUpdate", (req, res)=>{
 app.listen(port,()=>{
     console.log(`Server is listening on port ${port}.`);
 });
+
+// Teacher Section -----------------------------------
+app.get("/tProfile",(req, res)=>{
+    res.render("teacher/tProfile");
+})
+app.get("/tBatch",(req, res)=>{
+    res.render("teacher/tBatch");
+})
+app.get("/tSettings",(req, res)=>{
+    res.render("teacher/tSettings");
+})

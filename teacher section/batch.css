@@ -137,7 +137,7 @@ cursor: pointer;
 .buttons button:active{
     /* border-color:aliceblue; */
     transform: scale(0.9);
-    }
+}
 
 /* modal section */
 
