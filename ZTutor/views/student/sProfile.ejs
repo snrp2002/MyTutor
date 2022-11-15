@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Profile | Student</title>
+        <link rel="stylesheet" href="css/sStyle.css">
+        <link rel="stylesheet" href="css/home.css">
+    </head>
+    <body>
+        <!-- navbar starts --------------------------------------->
+        <%- include('../partials/navbar', {DP: sDP}); %>
+        <!-- navbar ends --------------------------------------->
+
+
+        <div class="home-page">
+            <!-------------------- Left Sidebar -------------------->
+            <%- include('sPartials/sidebar', {DP: sDP, name: sDetails.name}); %>
+
+            <!-------------------- Right Sidebar -------------------->
+            <div class="right-sidebar">
+                <div class="profile">
+                    <div class="profile-photo-container">
+                        <img src="<%= sDP %>" class="profile-photo">
+                        <form action="/updateStudentDP" method="post" enctype="multipart/form-data">
+                            <input type="file" accept="image/*" name="profile_image" value="<%= sDP %>" id="upload" style="display: none;" onchange="this.form.submit()">
+                            <label for="upload" id="upload-botton"><img src="images/home/camera.png" width="20px"></label>
+                        </form>
+                    </div>
+                    <div class="profile-details">
+                        <h3>Profile Details</h3>
+                        <hr>
+                        <p>Personal Details</p>
+                        <div class="details">
+                            <div class="details-container">
+                                <div class="details-left"><h6>Name</h6></div>
+                                <div class="details-right"><h6><%=sDetails.name%></h6></div>
+                            </div>
+                            <div class="details-container">
+                                <div class="details-left"><h6>D.O.B:</h6></div>
+                                <div class="details-right"><h6><%=sDetails.DOB%></h6></div>
+                            </div>
+                            <div class="details-container">
+                                <div class="details-left"><h6>Gender</h6></div>
+                                <div class="details-right"><h6><%=sDetails.gender%></h6></div>
+                            </div>
+                            <div class="details-container">
+                                <div class="details-left"><h6>Email</h6></div>
+                                <div class="details-right"><h6><%=sDetails.email%></h6></div>
+                            </div>
+                            <div class="details-container">
+                                <div class="details-left"><h6>Mobile No.</h6></div>
+                                <div class="details-right"><h6><%=sDetails.mobile_no%></h6></div>
+                            </div>
+                            <div class="details-container">
+                                <div class="details-left"><h6>City/Village</h6></div>
+                                <div class="details-right"><h6><%=sDetails.city%></h6></div>
+                            </div>
+                        </div>
+                        <p>Academic Details</p>
+                        <div class="details">
+                            <div class="details-container">
+                                <div class="details-left"><h6>Class</h6></div>
+                                <div class="details-right"><h6><%=sDetails.class%></h6></div>
+                            </div>
+                            <div class="details-container">
+                                <div class="details-left"><h6>Board</h6></div>
+                                <div class="details-right"><h6><%=sDetails.board%></h6></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-update">
+                        <a id="editBtn" style="cursor: pointer;"><img src="images/home/editing.png"></a>
+                    </div>
+                </div>
+            
+                <div class="edit-modal" id="myModal">
+                    <div class="edit-modal-content">
+                        <h3 style="margin: 5px 0 10px;">Edit Details</h3>
+                        <div>
+                            <form action="/sProfileUpdate" method="post">
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>Name</h6></div>
+                                    <div class="profile-edit-input"><input type="text" name="name" value="<%=sDetails.name%>" required></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>D.O.B.</h6></div>
+                                    <div class="profile-edit-input"><input type="date" id="DOB" name="DOB" value="<%=sDetails.DOB%>" required></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>Gender</h6></div>
+                                    <div class="profile-edit-input" id="gender">
+                                        <% if(sDetails.gender=="Male"){%>
+                                            <input type="radio" id="male" name="gender" value="Male" checked required>
+                                            <span class="gender-option">Male</span>
+                                            <input type="radio" id="female" name="gender" value="Female" required>
+                                            <span class="gender-option">Female</span>
+                                        <%}else{%>
+                                            <input type="radio" id="male" name="gender" value="Male" required>
+                                            <span class="gender-option">Male</span>
+                                            <input type="radio" id="female" name="gender" value="Female" checked required>
+                                            <span class="gender-option">Female</span>
+                                        <%}%>
+                                    </div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>Email</h6></div>
+                                    <div class="profile-edit-input"><input type="email" name="email" value="<%=sDetails.email%>" readonly></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>Mobile No.</h6></div>
+                                    <div class="profile-edit-input"><input type="tel" name="mobile_no" value="<%=sDetails.mobile_no%>" required></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>City/ Village </h6></div>
+                                    <div class="profile-edit-input"><input type="text" name="city" value="<%=sDetails.city%>" required></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>Class </h6></div>
+                                    <div class="profile-edit-input"><input type="text" name="class" value="<%=sDetails.class%>" required></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="profile-edit-field"><h6>Board </h6></div>
+                                    <div class="profile-edit-input"><input type="text" name="board" value="<%=sDetails.board%>" required></div>
+                                </div>
+                                <div class="profile-edit-elements">
+                                    <div class="updateBtn">
+                                        <button name="update" value="true">Update</button>
+                                    </div>
+                                    <div class="cancelBtn">
+                                        <button class="closeBtn" name="update" value="false">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let today = new Date();
+            let dd = today.getDate();
+            let mm = today.getMonth() + 1; //January is 0!
+            let yyyy = today.getFullYear();
+
+            if (dd < 10) {
+            dd = '0' + dd;
+            }
+            if (mm < 10) {
+            mm = '0' + mm;
+            }    
+            today = yyyy + '-' + mm + '-' + dd;
+            let min = (yyyy-100) + '-01-01'; 
+            document.getElementById("DOB").setAttribute("max", today);
+            document.getElementById("DOB").setAttribute("min", min);
+
+            const modal = document.getElementById("myModal");
+            const btn = document.getElementById("editBtn");
+            const span = document.getElementsByClassName("closeBtn");
+
+            btn.onclick = function () {
+                modal.style.display = "block";
+            };
+            span.onclick = function () {
+                modal.style.display = "none";
+            };
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="public/style.css">
+    </head>
+    <body>
+        <div class="announcement">
+            <div class="announcement_poster">
+            </div>
+            <div class="announcement_headings">
+                <div class="announcement_mainheading">Artificial Intelligence Lab (A3)</div>
+                <div class="announcement_subheading">BE 3.1 Yr 2022 July-December</div>
+            </div>
+            <div class="announcement_edit">
+                <div class="announcement_edit_primary">
+                    <div class="announcement_edit_primary_img"><img src="public/img/loudspeaker.png" width="40px"></div>
+                    Announce something to your class
+                </div>
+
+                <div class="announcement_edit_secondary">
+                    <form >
+                        <div class="announcement_edit_body">
+                            <input type="text" placeholder="Enter the title">
+                            <textarea placeholder="Announce something to your class"></textarea>
+                        </div>
+                        <div class="announcement_edit_buttons">
+                            <button id="announcement_edit_cancel_btn">Cancle</button>
+                            <button id="announcement_edit_post_btn">Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="past_announcements">
+                <div class="past_announcement">
+                    <div class="announcement_title">
+                        <div class="announcement_img"><img src="public/img/notepad.png" width="30px"></div>
+                        <div style="width: 90%;">
+                            <h4 style="margin: 0;">The war of blood and fire.</h4>
+                            <p style="margin: 0; font-size: 0.8rem;">21 sept</p>
+                        </div>
+                        <div class="announcement_delete">
+                            <img src="public/img/bin.png" width="24px">
+                        </div>
+                    </div>
+                    <div class="announcement_body">
+                        <p style="margin: 0; font-size: 0.9rem;"> 
+                            The scales of a full-grown dragon were harder than steel, and even those arrows that struck home 
+                            seldom penetrated enough to do more than enrage the great beasts. 
+                            But as Meraxes banked above the Hellholt, a defender atop the castle’s 
+                            highest tower triggered a scorpion, and a yard-long iron bolt caught the queen’s 
+                            dragon in the right eye. Meraxes did not die at once, but came crashing to earth in mortal agony, 
+                            destroying the tower and a large section of the Hellholt’s curtain wall in her death throes.
+                        </p>
+                    </div>
+                </div>
+                <div class="past_announcement">
+                    <div class="announcement_title">
+                        <div class="announcement_img"><img src="public/img/notepad.png" width="30px"></div>
+                        <div style="width: 90%;">
+                            <h4 style="margin: 0;">The war of blood and fire.</h4>
+                            <p style="margin: 0; font-size: 0.8rem;">21 sept</p>
+                        </div>
+                        <div class="announcement_delete">
+                            <img src="public/img/bin.png" width="24px">
+                        </div>
+                    </div>
+                    <div class="announcement_body">
+                        <p style="margin: 0; font-size: 0.9rem;"> 
+                            The scales of a full-grown dragon were harder than steel, and even those arrows that struck home 
+                            seldom penetrated enough to do more than enrage the great beasts. 
+                            But as Meraxes banked above the Hellholt, a defender atop the castle’s 
+                            highest tower triggered a scorpion, and a yard-long iron bolt caught the queen’s 
+                            dragon in the right eye. Meraxes did not die at once, but came crashing to earth in mortal agony, 
+                            destroying the tower and a large section of the Hellholt’s curtain wall in her death throes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <script>
+            const primary = document.querySelector(".announcement_edit_primary");
+            const secondary = document.querySelector(".announcement_edit_secondary");
+            const Post = document.querySelector("#announcement_edit_post_btn");
+            const Close = document.querySelector("#announcement_edit_cancel_btn");
+            Post.addEventListener("click", (event)=>{
+                changeBackward();
+            })
+            Close.addEventListener("click", (event)=>{
+                changeBackward();
+            })
+
+            primary.addEventListener("click", (event)=>{
+                changeForward();
+            })
+
+            function changeForward(){
+                primary.style["display"] = "none";
+                secondary.style["display"] = "block";
+            }
+            function changeBackward(){
+                secondary.style["display"] = "none";
+                primary.style["display"] = "flex";
+            }
+
+            const announcements = document.querySelectorAll(".past_announcement");
+            announcements.forEach((announcement)=>{
+                announcement.addEventListener("click", (event)=>{
+                    if(announcement.lastElementChild.style["display"] == 'block'){
+                        announcement.lastElementChild.style["display"] = 'none';
+                    }else{
+                        announcement.lastElementChild.style["display"] = 'block';
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>
