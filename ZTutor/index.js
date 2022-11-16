@@ -85,3 +85,6 @@ app.get("/tBatch",(req, res)=>{
 app.get("/tSettings",(req, res)=>{
     res.render("teacher/tSettings");
 })
+app.get("/tInvite",(req, res)=>{
+    res.render("teacher/tInvite");
+})

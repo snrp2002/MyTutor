@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Teacher</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/tStyle.css" />
+  </head>
+
+  <body>
+    <!-- navbar starts --------------------------------------->
+    <%- include('../partials/navbar') %>
+    <!-- navbar ends ----------------------------------------------------->
+
+    <div class="home-page">
+      <!-------------------- Left Sidebar -------------------->
+      <%- include('tPartials/sidebar') %>
+
+      <!-------------------- Right Sidebar -------------------->
+      <div class="right-sidebar">
+          <div class="invite-container">
+
+            <div class="left-content">
+                <h3>Invite your friends to join MyTutor Family with you</h3>
+                <div class="invite-box">
+                    <h6>Your Special Invite URL</h6>
+                    <div class="url-box">https://mytutor/invite/hello123hii/</div>
+                </div>
+                <div class="social-media-box">
+                    <i class="fa-brands fa-facebook" title="facebook"></i>
+                    <i class="fa-brands fa-whatsapp" title="whatsapp"></i>
+                    <i class="fa-brands fa-twitter" title="twitter"></i>
+                </div>
+            </div>
+
+            <div class="right-image">
+                <img src="./images/student/refer.jpg" alt="refer">
+            </div>
+
+          </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      // modal to view teacher application starts ------------------------->
+      const modal = document.getElementById("myModal");
+      const btn = document.getElementById("editBtn");
+      const span = document.getElementsByClassName("closeBtn")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      // modal to view teacher application ends --------------------------->
+    </script>
+  </body>
+</html>

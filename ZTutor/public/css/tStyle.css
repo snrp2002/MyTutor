@@ -1063,3 +1063,45 @@ cursor: pointer;
     /* border-color:aliceblue; */
     transform: scale(0.9);
     }
+
+
+/* teacher invite section -------------------------------------- */
+.invite-container{
+    display: flex;
+    max-width: 800px;
+    min-width: 350px;
+    padding: 30px 50px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.invite-container .left-content h3{
+    /* margin-top: 30px; */
+    margin-bottom: 60px;
+}
+.invite-container .left-content .invite-box h6{
+    margin: 10px 0px;
+    font-size: .8rem;
+}
+.invite-container .url-box{
+    border: 1px solid black;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+.invite-container .right-image img{
+    height: 300px;
+    width: 300px;
+}
+.left-content .social-media-box{
+    font-size: 2rem;
+}
+.left-content .social-media-box i{
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
