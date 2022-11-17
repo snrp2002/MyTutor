@@ -45,66 +45,156 @@
                     </div>
                     <div class="su_in" id="su_form">
                         <form action="#" class="sign-up-form">
-                            <h2 class="su_form_hd">Sign up</h2>
                             <div class="su_form_pg" id="su_pg_1">
-                                <div class="su_input_fld">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" class="su_form_ctrl" id="user-name" placeholder="Enter your full name" required>
+                                <h2 class="su_form_hd">Sign up</h2>
+                                <p>Pick carefully from the given options:</p>
+                                <div class="su_fld_options" id="su_fld_op">
+                                    <label>
+                                        <input type="radio" id="su_cont_student" name="user_type" value="student">
+                                        <span>Continue as a Student</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" id="su_cont_teacher" name="user_type" value="teacher">
+                                        <span>Continue as a Teacher</span>
+                                    </label>
                                 </div>
-                                <div class="su_input_fld">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" class="su_form_ctrl" id="email" placeholder="Enter your email address" required>
-                                </div>
-                                <div class="su_input_fld">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" class="su_form_ctrl" id="password" placeholder="Enter your password" required>
-                                </div>
-                                <input type="submit" value="Sign up" class="su_form_btn">
                             </div>
                             <div class="su_form_pg" id="su_pg_2">
+                                <h2 class="su_form_hd">Sign up</h2>
+                                <p>Enter your details:</p>
                                 <div class="su_input_fld">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" class="su_form_ctrl" id="user-name" placeholder="Enter your full name" required>
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" class="su_form_ctrl" id="student_name" placeholder="Enter your full name" required>
                                 </div>
                                 <div class="su_input_fld">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" class="su_form_ctrl" id="email" placeholder="Enter your email address" required>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <input class="su_form_ctrl" id="student_dob" placeholder="Enter your date of birth" type="text" onfocus="(this.type='date')" required>
                                 </div>
                                 <div class="su_input_fld">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" class="su_form_ctrl" id="password" placeholder="Enter your password" required>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="text" class="su_form_ctrl" id="student_phone_no" placeholder="Enter your mobile number" required>
                                 </div>
-                                <input type="submit" value="Sign up" class="su_form_btn">
+                                <div class="su_fld_options" id="su_student_gender">
+                                    <label>
+                                        <input type="radio" name="user_type" value="male" id="su_student_gender_male">
+                                        <span>Male</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="user_type" value="female" id="su_student_gender_female">
+                                        <span>Female</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="user_type" value="other" id="su_student_gender_others">
+                                        <span>Others</span>
+                                    </label>
+                                </div>
                             </div>
                             <div class="su_form_pg" id="su_pg_3">
+                                <h2 class="su_form_hd">Sign up</h2>
+                                <p>Enter your details:</p>
                                 <div class="su_input_fld">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" class="su_form_ctrl" id="user-name" placeholder="Enter your full name" required>
+                                    <i class="fa-solid fa-house"></i>
+                                    <input type="text" class="su_form_ctrl" id="student_city" placeholder="City you live in" required>
                                 </div>
                                 <div class="su_input_fld">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" class="su_form_ctrl" id="email" placeholder="Enter your email address" required>
+                                    <i class="fa-solid fa-screen-users"></i>
+                                    <input type="text" class="su_form_ctrl" id="student_class" placeholder="Class you study in" required>
                                 </div>
-                                <div class="su_input_fld">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" class="su_form_ctrl" id="password" placeholder="Enter your password" required>
+                                <div class="su_fld_options" id="su_student_board">
+                                    <label>
+                                        <input type="radio" name="user_type" value="icse" id="su_student_board_icse">
+                                        <span>ICSE</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="user_type" value="cbse" id="su_student_board_cbse">
+                                        <span>CBSE</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="user_type" value="state_board" id="su_student_board_sb">
+                                        <span>State Board</span>
+                                    </label>
                                 </div>
-                                <input type="submit" value="Sign up" class="su_form_btn">
+                                <p>Confirm before proceeding:</p>
                             </div>
                             <div class="su_form_pg" id="su_pg_4">
+                                <h2 class="su_form_hd">Sign up</h2>
+                                <p>Enter your details:</p>
                                 <div class="su_input_fld">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" class="su_form_ctrl" id="user-name" placeholder="Enter your full name" required>
+                                    <i class="fa-solid fa-user"></i>
+                                    <input type="text" class="su_form_ctrl" id="teacher_name" placeholder="Enter your full name" required>
                                 </div>
                                 <div class="su_input_fld">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <input class="su_form_ctrl" id="teacher_dob" placeholder="Enter your date of birth" type="text" onfocus="(this.type='date')" required>
+                                </div>
+                                <div class="su_input_fld">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <input type="text" class="su_form_ctrl" id="teacher_phone_no" placeholder="Enter your mobile number" required>
+                                </div>
+                                <div class="su_fld_options" id="su_teacher_gender">
+                                    <label>
+                                        <input type="radio" name="user_type" value="male" id="su_teacher_gender_male">
+                                        <span>Male</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="user_type" value="female" id="su_teacher_gender_female">
+                                        <span>Female</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="user_type" value="other" id="su_teacher_gender_others">
+                                        <span>Others</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="su_form_pg" id="su_pg_5">
+                                <h2 class="su_form_hd">Sign up</h2>
+                                <p>Enter your details:</p>
+                                <div class="su_input_fld">
+                                    <i class="fa-solid fa-house"></i>
+                                    <input type="text" class="su_form_ctrl" id="teacher_city" placeholder="City you live in" required>
+                                </div>
+                                <div class="su_input_fld">
+                                    <i class="fa-solid fa-book"></i>
+                                    <input type="text" class="su_form_ctrl" id="teacher_degree" placeholder="Latest Qualification/Degree" required>
+                                </div>
+                                <div class="su_input_fld">
+                                    <i class="fa-solid fa-certificate"></i>
+                                    <input type="text" class="su_form_ctrl" id="teacher_specialisation" placeholder="Enter your specialisation" required>
+                                </div>
+                                <div class="su_input_fld">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <input type="text" class="su_form_ctrl" id="teacher_institute" placeholder="Institution you got your degree from" required>
+                                </div>
+                                <p>Confirm before proceeding:</p>
+                            </div>
+                            <div class="su_form_pg" id="su_pg_6">
+                                <h2 class="su_form_hd">Sign up</h2>
+                                <p>Enter your details: </p>
+                                <div class="su_input_fld">
                                     <i class="fas fa-envelope"></i>
-                                    <input type="email" class="su_form_ctrl" id="email" placeholder="Enter your email address" required>
+                                    <input type="email" class="su_form_ctrl_in" id="email" placeholder="Enter your email address" required>
                                 </div>
                                 <div class="su_input_fld">
                                     <i class="fas fa-lock"></i>
-                                    <input type="password" class="su_form_ctrl" id="password" placeholder="Enter your password" required>
+                                    <input type="password" class="su_form_ctrl_in" id="password" placeholder="Enter your password" required>
                                 </div>
-                                <input type="submit" value="Sign up" class="su_form_btn">
+                                <div class="su_input_fld">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" class="su_form_ctrl_in" id="password" placeholder="Confirm your password" required>
+                                </div>
+                                <input type="submit" value="Sign Up" class="su_form_btn" id="su_form_submit">
+                            </div>
+                            <div class="su_list_btn" id="su_list_btn" style="overflow: auto;">
+                                <div class="su_list_button" style="float: right;">
+                                    <button type="button" class="su_form_btn" id="su_prev_btn" onclick="nextPrev(-1)">Prev</button>
+                                    <button type="button" class="su_form_btn" id="su_next_btn" onclick="nextPrev(1)">Next</button>
+                                </div>
+                            </div>
+                            <div class="su_list_dots" style="text-align:center; margin-top:40px;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
                             </div>
                         </form>
                     </div>
@@ -112,24 +202,24 @@
             </div>
       
             <div class="su_panels_container">
-              <div class="su_panel su_left_panel">
-                <div class="su_panel_content">
-                  <h3>New here?</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!</p>
-                  <button class="su_form_btn transparent" id="sign-up-btn">Sign up</button>
+                <div class="su_panel su_left_panel">
+                    <div class="su_panel_content">
+                        <h3>New here?</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!</p>
+                        <button class="su_form_btn transparent" id="sign-up-btn">Sign up</button>
+                    </div>
+                    <img src="./sign_up_img.svg" class="su_panel_image" alt="" />
                 </div>
-                <img src="./sign_up_img.svg" class="su_panel_image" alt="" />
-              </div>
-              <div class="su_panel su_right_panel">
-                <div class="su_panel_content">
-                  <h3>One of us?</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!</p>
-                  <button class="su_form_btn transparent" id="sign-in-btn">Sign in</button>
+                <div class="su_panel su_right_panel">
+                    <div class="su_panel_content">
+                        <h3>One of us?</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!</p>
+                        <button class="su_form_btn transparent" id="sign-in-btn">Sign in</button>
+                    </div>
+                    <img src="./sign_in_img.svg" class="su_panel_image" alt="" />
                 </div>
-                <img src="./sign_in_img.svg" class="su_panel_image" alt="" />
-              </div>
             </div>
-          </div>
+        </div>
 
         <script>
             const sign_in_btn = document.querySelector("#sign-in-btn");
@@ -143,6 +233,117 @@
             sign_in_btn.addEventListener("click", () => {
                 container.classList.remove("sign-up-mode");
             });
+
+            var currentTab = 0; 
+            showTab(currentTab); 
+
+            function showTab(n) 
+            {
+                var x = document.getElementsByClassName("su_form_pg");
+                x[n].style.display = "block";
+                if (n == 0 || n == 1 || n == 3) 
+                {
+                    document.getElementById("su_prev_btn").style.display = "none";
+                } 
+                else if (n == x.length-1) 
+                {
+                    document.getElementById("su_list_btn").style.display = "none";
+                } 
+                else 
+                {
+                    document.getElementById("su_list_btn").style.display = "flex";
+                    document.getElementById("su_prev_btn").style.display = "inline";
+                    document.getElementById("su_next_btn").style.display = "inline";
+                }
+                fixStepIndicator(n);
+            }
+
+            function nextPrev(n) 
+            {
+                var x = document.getElementsByClassName("su_form_pg");
+                if (n == 1 && !validateForm()) 
+                    return false;
+                x[currentTab].style.display = "none";
+                
+                if(currentTab == 0)
+                {
+                    if(document.getElementById("su_cont_student").checked)
+                        currentTab = currentTab + n;
+                    else if(document.getElementById("su_cont_teacher").checked)
+                        currentTab = currentTab + n + 2;
+                    else
+                        currentTab = currentTab;
+                }
+                else if(currentTab == 2 && n == 1)
+                    currentTab = currentTab + n + 2;
+                else if(currentTab == 4 && n == 1)
+                    currentTab = currentTab + n;
+                else
+                    currentTab = currentTab + n;
+                
+                showTab(currentTab);
+            }
+
+            function validateForm() 
+            {
+                var x, y, i, valid = true;
+                x = document.getElementsByClassName("su_form_pg");
+                y = x[currentTab].getElementsByTagName("input");
+
+                for (i = 0; i < y.length; i++) 
+                {
+                    if (y[i].value == "") 
+                    {
+                        y[i].className += " invalid";
+                        valid = false;
+                    }
+                
+                    if(y[i] == document.getElementById("teacher_phone_no") || y[i] == document.getElementById("teacher_phone_no"))
+                    {
+                        if(!y[i].value.match(/^\d{10}$/)) 
+                        {
+                            y[i].className += " invalid";
+                            valid = false;
+                        }
+                    }
+                }
+                if(currentTab == 0 && !document.getElementById("su_cont_student").checked && !document.getElementById("su_cont_teacher").checked)
+                    valid = false;
+                if(currentTab == 1 && !document.getElementById("su_student_gender_male").checked && !document.getElementById("su_student_gender_female").checked && !document.getElementById("su_student_gender_others").checked)
+                    valid = false;
+                if(currentTab == 2 && !document.getElementById("su_student_board_sb").checked && !document.getElementById("su_student_board_icse").checked && !document.getElementById("su_student_board_cbse").checked)
+                    valid = false;
+                if(currentTab == 3 && !document.getElementById("su_teacher_gender_male").checked && !document.getElementById("su_teacher_gender_female").checked && !document.getElementById("su_teacher_gender_others").checked)
+                    valid = false;
+                if (valid) 
+                {
+                    if(currentTab < 3)
+                        document.getElementsByClassName("step")[currentTab].className += " finish";
+                    else
+                        document.getElementsByClassName("step")[currentTab-2].className += " finish";
+                }
+                return valid; 
+            }
+
+            function fixStepIndicator(n) 
+            {
+                var i, x = document.getElementsByClassName("step");
+                for (i = 0; i < x.length; i++) 
+                {
+                    if(i < 3)
+                    {
+                        x[i].className = x[i].className.replace(" active", "");
+                    }
+                    else
+                    {
+                        x[i-2].className = x[i-2].className.replace(" active", "");
+                    }
+                }
+                if(n < 3)
+                    x[n].className += " active";
+                else
+                    x[n-2].className += " active";
+            }
         </script>
     </body>
 </html>

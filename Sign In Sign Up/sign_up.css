@@ -162,7 +162,6 @@ form.sign-in-form
   border-radius: 10px;
   background: none;
   border: 0;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 1.5px rgba(0, 0, 0, 0.1);
   appearance: none;
   padding: 0;
@@ -193,7 +192,7 @@ form.sign-in-form
 
 .su_form_btn  
 {
-  width: 150px;
+  width: 100px;
   border: 2px solid rgb(90, 75, 218, 1);
   background-color: rgba(255, 255, 255);
   outline: none;
@@ -223,15 +222,88 @@ form.sign-in-form
   flex-direction: column;
 }
 
-#su_form
+.su_form_pg p
 {
-  margin: 100px auto;
-  padding: 40px;
-  width: 70%;
-  min-width: 300px;
+  color: rgb(0, 0, 0, 0.7);
 }
 
-/****************** Forms section ends ******************/
+#su_form
+{
+  margin: 5rem auto;
+  padding: 3rem;
+  width: 70%;
+}
+
+.su_form_pg div 
+{
+  padding: 0px;
+}
+
+.su_form_pg div input
+{
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.su_form_pg div input.invalid 
+{
+  background: rgb(255, 0, 0, 0.1);
+  border-top-right-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+}
+
+.su_form_pg 
+{
+  display: none;
+  text-align: center;
+}
+
+.step 
+{
+  height: 1rem;
+  width: 1rem;
+  margin: 0 2px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active 
+{
+  background-color: rgb(90, 75, 218, 0.5);
+}
+
+.step.finish 
+{
+  background-color: rgb(90, 75, 218);
+}
+
+#su_fld_op
+{
+  display: block;
+}
+
+#su_fld_op label
+{
+  width: 20rem;
+  margin: 1rem 0rem;
+}
+
+#su_fld_op label input
+{
+  background: none;
+  padding: 0;
+} 
+
+#su_student_gender label input
+{
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+/******************* Forms section ends *******************/
 
 
 /****************** Panel section starts ******************/
@@ -379,4 +451,4 @@ form.sign-in-form
   pointer-events: all;
 }
 
-/****************** Panel section ends ******************/
+/***************** Panel section ends ******************/
