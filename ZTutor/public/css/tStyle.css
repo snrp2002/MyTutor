@@ -12,9 +12,6 @@
     justify-content: center;
     font-weight: 900;
     font-size: 2rem;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: 'Quicksand', sans-serif;
 }
 .headersecond
 {
@@ -25,8 +22,6 @@
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 50px;
-    font-family: 'Quicksand', sans-serif;
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; */
 }
 .containers
 {
@@ -109,35 +104,6 @@
     margin-top: 10px;
     
 }
-.buttons
-{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-.buttons button{
-    padding: 20px 30px;
-    font-size: 1.2rem;
-    /* border-color:aliceblue; */
-    border: 0px;
-    font-weight: 800;
-    background-color: #5a4bda;
-    color: white;
-    /* background-color: rgb(212, 204, 204); */
-    border-radius: 10%;
-    font-family: 'Quicksand', sans-serif;
-    cursor: pointer;
-}
-/* .buttons button:hover{
-color: aliceblue;
-background-color: rgb(164, 164, 172);
-cursor: pointer;
-} */
-
-.buttons button:active{
-    /* border-color:aliceblue; */
-    transform: scale(0.9);
-    }
 
 /* modal section */
 
@@ -920,188 +886,5 @@ margin-left: 10px;
     margin-top: 15px;
 }
 .update #editBtn{
-    cursor: pointer;
-}
-
-/* tBatch ------------------------------------------------------------ */
-.batch__mainbody
-{
-    padding: 10px 50px;
-
-}
-.batch__header
-{
-    padding : 10px 30px;
-    display: flex;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 2rem;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: 'Quicksand', sans-serif;
-}
-.batch__headersecond
-{
-    color:rgb(167, 167, 172);
-    font-weight: 900;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    font-family: 'Quicksand', sans-serif;
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; */
-}
-.batch__containers
-{
-    margin-top: 30px;
-    padding : 10px 10px;
-    display: flex;
-    /* border: 1px solid black; */
-}
-
-.batch__box
-{
-margin-right: 10px;
-/* border: 1px solid black; */
-box-shadow: 3px 3px 10px 1px rgb(105, 104, 104);
-border-radius: 5%;
-/* transition: 1s all; */
-
-}
-
-.batch__boxhead
-{
-    /* background-color: rgb(140, 139, 139); */
-    /* background: linear-gradient(to bottom, rgb(209, 207, 207), rgb(120, 118, 118), rgb(27, 26, 26)); */
-    background:url("../images/teacher/bg-2.jpg");
-    padding: 30px 30px;
-    border-radius: 5%;
-    display: flex;
-    /* box-shadow: 3px 3px 10px 1px rgb(105, 104, 104); */
-}
-
-.batch__boximg img{
-    height: 60px;
-    border-radius: 50%;
-    background-color: aliceblue;
-    margin-left: 80px;
-}
-.batch__boxhead a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:aliceblue;
-    font-size: 1.7rem;
-    text-decoration: none;
-    font-weight: 700;
-    font-family: 'Quicksand', sans-serif;
-    
-}
-.delete img{
-height: 25px;
-/* margin-top: 10px; */
-}
-.batch__boxhead a:hover
-{
-    color: rgb(242, 238, 122);
-    font-weight: 900;
-    cursor: pointer;
-}
-.boxhead a:active
-{
-    transform: scale(0.9);
-}
-.batch__boxbody
-{
-    padding: 30px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    /* color: rgb(167, 163, 163); */
-    color: black;
-    /* text-shadow: 1px 0.5px rgb(161, 160, 160); */
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: 'Quicksand', sans-serif;
-}
-.batch__boxbody a:hover{
-    cursor: pointer;
-}
-.batch__boxbody div{
-    margin-bottom: 5px;
-}
-.batch__boxbody .editd{
-    margin-top: 10px;
-    
-}
-.buttons
-{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-.buttons button{
-    padding: 20px 30px;
-    font-size: 1.2rem;
-    /* border-color:aliceblue; */
-    border: 0px;
-    font-weight: 800;
-    background-color: #5a4bda;
-    color: white;
-    /* background-color: rgb(212, 204, 204); */
-    border-radius: 10%;
-    font-family: 'Quicksand', sans-serif;
-    cursor: pointer;
-}
-/* .buttons button:hover{
-color: aliceblue;
-background-color: rgb(164, 164, 172);
-cursor: pointer;
-} */
-
-.buttons button:active{
-    /* border-color:aliceblue; */
-    transform: scale(0.9);
-    }
-
-
-/* teacher invite section -------------------------------------- */
-.invite-container{
-    display: flex;
-    max-width: 800px;
-    min-width: 350px;
-    padding: 30px 50px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 15px;
-    background-color: #fff;
-}
-.invite-container .left-content h3{
-    /* margin-top: 30px; */
-    margin-bottom: 60px;
-}
-.invite-container .left-content .invite-box h6{
-    margin: 10px 0px;
-    font-size: .8rem;
-}
-.invite-container .url-box{
-    border: 1px solid black;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 15px;
-    margin-bottom: 30px;
-}
-.invite-container .right-image img{
-    height: 300px;
-    width: 300px;
-}
-.left-content .social-media-box{
-    font-size: 2rem;
-}
-.left-content .social-media-box i{
-    margin-right: 10px;
-    margin-left: 10px;
     cursor: pointer;
 }

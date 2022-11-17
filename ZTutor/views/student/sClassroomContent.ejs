@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/sStyle.css">
+    </head>
+    <body>
+        <!-- navbar starts --------------------------------------->
+        <%- include('../partials/navbar'); %>
+        <!-- navbar ends --------------------------------------->
+
+
+        <div class="home-page">
+            <!-------------------- Left Sidebar -------------------->
+            <%- include('sPartials/sidebar'); %>
+
+            <!-------------------- Right Sidebar -------------------->
+            <div class="right-sidebar">
+                <div class="classroom_container">
+                    <div class="classroom_nav">
+                        <div class="classroom_options">
+                            Stream
+                        </div>
+                        <div class="classroom_options">
+                            Notes
+                        </div>
+                        <div class="classroom_options">
+                            People
+                        </div>
+                    </div>
+                    <div id="sClassroomAnnouncement">
+                        <%- include('sPartials/sClassroomAnnouncement'); %>
+                    </div>
+                    <div id="sClassroomNotes" style="display: none;">
+                        <%- include('sPartials/sClassroomNotes'); %>
+                    </div>
+                    <div id="sClassroomPeople" style="display: none;">
+                        <%- include('sPartials/sClassroomPeople'); %>
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <script>
+            const announcement = document.querySelector("#sClassroomAnnouncement");
+            const notes = document.querySelector("#sClassroomNotes");
+            const people = document.querySelector("#sClassroomPeople");
+            const options = document.querySelectorAll(".classroom_options");
+            options.forEach((option)=>{
+                option.onclick = ()=>{
+                    options.forEach((option)=>{
+                        option.style.color = "black";
+                        option.style.borderBottom = "none";
+                    });
+                    option.style.color = "#5a4bda";
+                    option.style.borderBottom = "4px solid #5a4bda";
+                    if(option.innerText == "Stream"){
+                        announcement.style.display = "block";
+                        notes.style.display = "none";
+                        people.style.display = "none";
+                    }else if(option.innerText == "Notes"){
+                        announcement.style.display = "none";
+                        notes.style.display = "block";
+                        people.style.display = "none";
+                    }else{
+                        announcement.style.display = "none";
+                        notes.style.display = "none";
+                        people.style.display = "block";
+                    }
+                };
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting | Student</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sStyle.css">
+  </head>
+  <body>
+    <!-- navbar starts --------------------------------------->
+    <%- include('../partials/navbar'); %>
+    <!-- navbar ends --------------------------------------->
+
+    <div class="home-page">
+        <!-------------------- Left Sidebar -------------------->
+        <%- include('sPartials/sidebar'); %>
+
+        <!-------------------- Right Sidebar -------------------->
+        <div class="right-sidebar">
+
+            <!-- 2nd box --------------------------- -->
+            <div class="right-sidebar-container">
+                <div class="batch">
+                    <div class="batch__mainbody">
+                      <div class="batch__header">My Classroom</div>
+                      <div class="batch__headersecond">Current Courses: 1</div>
+                      <div class="batch__containers">
+                        <div class="batch__box">
+                          <div class="batch__boxhead">
+                            <div class="batch__boxabout">
+                              <a href="/sCourse">
+                                <div class="batch__subname">Physics</div>
+                                <div class="batch__cl">class 10, ICSE</div>
+                              </a>
+                            </div>
+                            <div class="batch__boximg">
+                              <!-- This dp will be present in student section -->
+                              <img src="images/teacher/teacher.png" alt="sub">
+                            </div>
+                          </div>
+                          <div class="batch__boxbody">
+                            <div class="batch__fee">Fees: Rs 500</div>
+                            <div class="batch__studcount">Number of students: 40</div>
+                            <div class="batch__daytime">Monday , 8:00 AM - 10:00 AM</div>
+                            <div class="batch__editd">
+                                <a id="delete" class="delete"><img src="images/home/bin.png" alt="" width="25px"/></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            
+            <br>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>

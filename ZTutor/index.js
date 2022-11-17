@@ -10,9 +10,6 @@ app.use(express.static("public"));
 
 
 //-------------------- Admin Section --------------------//
-let aDetails = {name:"Souvik Naskar", gender:"Male", DOB:'2002-11-14', email:"snrp2002@gamil.com", 
-    mobile_no:9875571304, city:"Kolkata"};  
-let aDP = "images/admin/admin.png";
 let aAnnouncements = []
 app.get("/aProfile",(req, res)=>{
     res.render("admin/aProfile");
@@ -30,15 +27,16 @@ app.post("/aProfileUpdate",(req, res)=>{
     }
 })
 app.get("/aSettings",(req, res)=>{
-    res.render("admin/aSettings",{aDP: aDP, aDetails: aDetails});
+    res.render("admin/aSettings");
 })
 app.get("/aAnnouncements",(req, res)=>{
-    res.render("admin/aAnnouncements",{aDP: aDP, aDetails: aDetails, aAnnouncements: aAnnouncements});
+    res.render("admin/aAnnouncements");
 })
 app.post("/aSettingsPasswordUpdate", (req, res)=>{
     console.log(req.body);
     res.redirect("/aProfile");
 })
+
 app.post("/aAnnouncementUpdate", (req, res)=>{
     const notif = {subject: req.body.subject, body: req.body.body, date: new Date().toLocaleDateString("en-US")};
     aAnnouncements.unshift(notif);
@@ -48,34 +46,24 @@ app.post("/aAnnouncementUpdate", (req, res)=>{
 
 
 //-------------------- Student Section --------------------//
-let sDetails = {name:"Souvik Naskar", gender:"Male", DOB:'2002-11-14', email:"snrp2002@gamil.com", 
-                        mobile_no:9875571304, city:"Kolkata", class:"12+", board:"WestBengal"};
-let sDP = "images/student/student.jpg";
 app.get("/sProfile",(req, res)=>{
-    res.render("student/sProfile",{sDP:sDP, sDetails: sDetails});
-})
-
-app.post("/sProfileUpdate",(req, res)=>{
-    if(req.body.update=="true"){
-        sDetails = req.body;
-        res.redirect("/sProfile");
-    }else{
-        res.redirect("/sProfile");
-    }
+    res.render("student/sProfile");
 })
 app.get("/sSettings",(req, res)=>{
-    res.render("student/sSettings",{sDP:sDP, sDetails: sDetails});
+    res.render("student/sSettings");
 })
-app.post("/sSettingsPasswordUpdate", (req, res)=>{
-    console.log(req.body);
-    res.redirect("/sProfile");
+app.get("/sClassroom",(req, res)=>{
+    res.render("student/sClassroom");
+})
+app.get("/sCourse",(req, res)=>{
+    res.render("student/sClassroomContent");
+})
+app.get("/sInvite",(req, res)=>{
+    res.render("student/sInvite");
 })
 
-app.listen(port,()=>{
-    console.log(`Server is listening on port ${port}.`);
-});
 
-// Teacher Section -----------------------------------
+//------------------------- Teacher Section -------------------------//
 app.get("/tProfile",(req, res)=>{
     res.render("teacher/tProfile");
 })
@@ -88,3 +76,12 @@ app.get("/tSettings",(req, res)=>{
 app.get("/tInvite",(req, res)=>{
     res.render("teacher/tInvite");
 })
+
+
+
+
+
+
+app.listen(port,()=>{
+    console.log(`Server is listening on port ${port}.`);
+});

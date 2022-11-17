@@ -375,3 +375,159 @@ textarea{
 .right-nav i:hover{
     transform: scale(.9);
 }
+
+/* Batch/Classroom ------------------------------------------------------------ */
+.batch__mainbody
+{
+    padding: 10px 50px;
+
+}
+.batch__header
+{
+    padding : 10px 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 2rem;
+}
+.batch__headersecond
+{
+    color:rgb(167, 167, 172);
+    font-weight: 900;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.batch__containers
+{
+    margin-top: 30px;
+    padding : 10px 10px;
+    display: flex;
+}
+
+.batch__box
+{
+margin-right: 10px;
+box-shadow: 3px 3px 10px 1px rgb(105, 104, 104);
+border-radius: 5%;
+}
+
+.batch__boxhead
+{
+    background:url("../images/teacher/bg-2.jpg");
+    padding: 30px 30px;
+    border-radius: 5%;
+    display: flex;
+}
+
+.batch__boximg img{
+    height: 60px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin-left: 80px;
+}
+.batch__boxhead a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:aliceblue;
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+.batch__boxhead a:hover
+{
+    color: rgb(242, 238, 122);
+    font-weight: 900;
+    cursor: pointer;
+}
+.boxhead a:active
+{
+    transform: scale(0.9);
+}
+.batch__boxbody
+{
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    color: black;
+}
+.batch__boxbody a:hover{
+    cursor: pointer;
+}
+.batch__boxbody div{
+    margin-bottom: 5px;
+}
+.batch__boxbody .editd{
+    margin-top: 10px;
+    
+}
+.buttons
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.buttons button{
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: 0px;
+    font-weight: 800;
+    background-color: #5a4bda;
+    color: white;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+.buttons button:active{
+    transform: scale(0.9);
+}
+.batch__editd{
+    padding-top: 5px;
+}
+/* invite section -------------------------------------- */
+.invite-container{
+    display: flex;
+    max-width: 800px;
+    min-width: 350px;
+    padding: 30px 50px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.invite-container .left-content h3{
+    /* margin-top: 30px; */
+    margin-bottom: 60px;
+}
+.invite-container .left-content .invite-box h6{
+    margin: 10px 0px;
+    font-size: .8rem;
+}
+.invite-container .url-box{
+    border: 1px solid black;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+.invite-container .right-image img{
+    height: 300px;
+    width: 300px;
+}
+.left-content .social-media-box{
+    font-size: 2rem;
+}
+.left-content .social-media-box i{
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}

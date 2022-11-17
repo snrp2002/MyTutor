@@ -191,14 +191,48 @@
 } */
 
 
+/* ClassRoom */
+.classroom_container{
+    margin: auto;
+    width: 850px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.classroom_nav{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.classroom_options{
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 600;
+    justify-content: center;
+    cursor: pointer;
+}
+.classroom_options:first-child{
+    color: #5a4bda;
+    border-bottom: 4px solid #5a4bda;
+}
+.classroom_options:hover{
+    background-color: rgba(235, 235, 235, 0.504);
+    background-color: #bfbfff;
+}
 
 /* Notes Page */
 .notes{
     margin: auto;
-    width: 700px;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 15px;
+    width: 750px;
+    padding: 20px;
 }
 .note{
    display: flex;
@@ -238,10 +272,8 @@
 /* People page */
 .people{
     margin: auto;
-    width: 700px;
+    width: 750px;
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 15px;
 }
 .people_heading{
     margin: 0;
@@ -302,7 +334,7 @@
 .announcement_poster{
     height: 220px;
     border-radius: 10px;
-    background-image: url("img/animation-1.gif");
+    background-image: url("../images/home/animation-1.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-color: rgb(144 164 173);

@@ -10,21 +10,21 @@
     </head>
     <body>
         <!-- navbar starts --------------------------------------->
-        <%- include('../partials/navbar', {DP: sDP}); %>
+        <%- include('../partials/navbar'); %>
         <!-- navbar ends --------------------------------------->
 
 
         <div class="home-page">
             <!-------------------- Left Sidebar -------------------->
-            <%- include('sPartials/sidebar', {DP: sDP, name: sDetails.name}); %>
+            <%- include('sPartials/sidebar'); %>
 
             <!-------------------- Right Sidebar -------------------->
             <div class="right-sidebar">
                 <div class="profile">
                     <div class="profile-photo-container">
-                        <img src="<%= sDP %>" class="profile-photo">
+                        <img src="images/student/student.jpg" class="profile-photo">
                         <form action="/updateStudentDP" method="post" enctype="multipart/form-data">
-                            <input type="file" accept="image/*" name="profile_image" value="<%= sDP %>" id="upload" style="display: none;" onchange="this.form.submit()">
+                            <input type="file" accept="image/*" name="profile_image" value="images/student/student.jpg" id="upload" style="display: none;" onchange="this.form.submit()">
                             <label for="upload" id="upload-botton"><img src="images/home/camera.png" width="20px"></label>
                         </form>
                     </div>
@@ -35,38 +35,39 @@
                         <div class="details">
                             <div class="details-container">
                                 <div class="details-left"><h6>Name</h6></div>
-                                <div class="details-right"><h6><%=sDetails.name%></h6></div>
+                                <div class="details-right"><h6>Souvik Naskar</h6></div>
                             </div>
                             <div class="details-container">
                                 <div class="details-left"><h6>D.O.B:</h6></div>
-                                <div class="details-right"><h6><%=sDetails.DOB%></h6></div>
+                                <div class="details-right"><h6>2002-11-14</h6></div>
                             </div>
                             <div class="details-container">
                                 <div class="details-left"><h6>Gender</h6></div>
-                                <div class="details-right"><h6><%=sDetails.gender%></h6></div>
+                                <div class="details-right"><h6>Male</h6></div>
                             </div>
                             <div class="details-container">
                                 <div class="details-left"><h6>Email</h6></div>
-                                <div class="details-right"><h6><%=sDetails.email%></h6></div>
+                                <div class="details-right"><h6>snrp2002@gmail.com</h6></div>
                             </div>
                             <div class="details-container">
                                 <div class="details-left"><h6>Mobile No.</h6></div>
-                                <div class="details-right"><h6><%=sDetails.mobile_no%></h6></div>
+                                <div class="details-right"><h6>9875571304
+                                </h6></div>
                             </div>
                             <div class="details-container">
                                 <div class="details-left"><h6>City/Village</h6></div>
-                                <div class="details-right"><h6><%=sDetails.city%></h6></div>
+                                <div class="details-right"><h6>Kolkata</h6></div>
                             </div>
                         </div>
                         <p>Academic Details</p>
                         <div class="details">
                             <div class="details-container">
                                 <div class="details-left"><h6>Class</h6></div>
-                                <div class="details-right"><h6><%=sDetails.class%></h6></div>
+                                <div class="details-right"><h6>12+</h6></div>
                             </div>
                             <div class="details-container">
                                 <div class="details-left"><h6>Board</h6></div>
-                                <div class="details-right"><h6><%=sDetails.board%></h6></div>
+                                <div class="details-right"><h6>WestBengal</h6></div>
                             </div>
                         </div>
                     </div>
@@ -74,55 +75,47 @@
                         <a id="editBtn" style="cursor: pointer;"><img src="images/home/editing.png"></a>
                     </div>
                 </div>
-            
                 <div class="edit-modal" id="myModal">
                     <div class="edit-modal-content">
                         <h3 style="margin: 5px 0 10px;">Edit Details</h3>
                         <div>
-                            <form action="/sProfileUpdate" method="post">
+                            <form>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>Name</h6></div>
-                                    <div class="profile-edit-input"><input type="text" name="name" value="<%=sDetails.name%>" required></div>
+                                    <div class="profile-edit-input"><input type="text" name="name" value="Souvik Naskar" required></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>D.O.B.</h6></div>
-                                    <div class="profile-edit-input"><input type="date" id="DOB" name="DOB" value="<%=sDetails.DOB%>" required></div>
+                                    <div class="profile-edit-input"><input type="date" id="DOB" name="DOB" value="2002-11-14" required></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>Gender</h6></div>
                                     <div class="profile-edit-input" id="gender">
-                                        <% if(sDetails.gender=="Male"){%>
-                                            <input type="radio" id="male" name="gender" value="Male" checked required>
-                                            <span class="gender-option">Male</span>
-                                            <input type="radio" id="female" name="gender" value="Female" required>
-                                            <span class="gender-option">Female</span>
-                                        <%}else{%>
-                                            <input type="radio" id="male" name="gender" value="Male" required>
-                                            <span class="gender-option">Male</span>
-                                            <input type="radio" id="female" name="gender" value="Female" checked required>
-                                            <span class="gender-option">Female</span>
-                                        <%}%>
+                                        <input type="radio" id="male" name="gender" value="Male" checked required>
+                                        <span class="gender-option">Male</span>
+                                        <input type="radio" id="female" name="gender" value="Female" required>
+                                        <span class="gender-option">Female</span>
                                     </div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>Email</h6></div>
-                                    <div class="profile-edit-input"><input type="email" name="email" value="<%=sDetails.email%>" readonly></div>
+                                    <div class="profile-edit-input"><input type="email" name="email" value="snrp2002@gmail.com" readonly></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>Mobile No.</h6></div>
-                                    <div class="profile-edit-input"><input type="tel" name="mobile_no" value="<%=sDetails.mobile_no%>" required></div>
+                                    <div class="profile-edit-input"><input type="tel" name="mobile_no" value="9875571304" required></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>City/ Village </h6></div>
-                                    <div class="profile-edit-input"><input type="text" name="city" value="<%=sDetails.city%>" required></div>
+                                    <div class="profile-edit-input"><input type="text" name="city" value="Kolkata" required></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>Class </h6></div>
-                                    <div class="profile-edit-input"><input type="text" name="class" value="<%=sDetails.class%>" required></div>
+                                    <div class="profile-edit-input"><input type="text" name="class" value="12+" required></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="profile-edit-field"><h6>Board </h6></div>
-                                    <div class="profile-edit-input"><input type="text" name="board" value="<%=sDetails.board%>" required></div>
+                                    <div class="profile-edit-input"><input type="text" name="board" value="WestBengal" required></div>
                                 </div>
                                 <div class="profile-edit-elements">
                                     <div class="updateBtn">
